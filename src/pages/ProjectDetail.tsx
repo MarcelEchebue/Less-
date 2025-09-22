@@ -251,6 +251,16 @@ export const projectsDetails = {
                                     </p>
                                 </div>
                             ),
+                            fr: (
+                                <div className="flex flex-col items-end text-right">
+                                    <p className="text-lg md:text-xl font-light text-white">
+                                        "CHEZ <span className="font-bold">LESS +</span>, NOUS FAISONS
+                                    </p>
+                                    <p className="text-lg md:text-xl font-light text-white">
+                                        <span className="font-bold">BEAUCOUP</span> AVEC <span className="font-bold">PEU</span>”
+                                    </p>
+                                </div>
+                            ),
                             en: (
                                 <div className="flex flex-col items-end text-right">
                                     <p className="text-lg md:text-xl font-light text-white">
@@ -282,6 +292,19 @@ export const projectsDetails = {
                                     </p>
                                     <p className="text-lg md:text-xl font-light text-white">
                                         UN <span className="font-bold">PASO PEQUEÑO</span>”
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col items-end text-right">
+                                    <p className="text-lg md:text-xl font-light text-white">
+                                        "CHAQUE <span className="font-bold">GRANDE</span>
+                                    </p>
+                                    <p className="text-lg md:text-xl font-light text-white">
+                                        HISTOIRE COMMENCE PAR
+                                    </p>
+                                    <p className="text-lg md:text-xl font-light text-white">
+                                        UN <span className="font-bold">PETIT PAS</span>”
                                     </p>
                                 </div>
                             ),
