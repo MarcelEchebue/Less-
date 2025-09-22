@@ -60,12 +60,6 @@ export function AllProjects({ onNavigate }: AllProjectsProps) {
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-wide">{t('projects.title')}</h1>
-                    <button
-                        onClick={() => onNavigate('home')}
-                        className="mt-4 underline underline-offset-4 hover:text-gray-300 transition"
-                    >
-                        {t('projects.backToHome')}
-                    </button>
                 </div>
             </section>
 

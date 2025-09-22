@@ -25,7 +25,7 @@ const translations = {
     'nav.rigor.text': 'Nuestro proceso combina rigor técnico, sensibilidad estética y reflexión poética. Analizamos el contexto social, cultural y económico para garantizar coherencia y pertinencia. Evitamos lo superfluo y nos centramos en lo esencial, creando proyectos únicos donde funcionalidad, belleza y emoción se encuentran, y donde las artes se integran de manera orgánica.',
     'nav.consciousness.title': 'CONCIENCIA Y COLABORACIÓN',
     'nav.consciousness.text': 'Muchos desconocen lo que realmente pueden esperar de un arquitecto. Por eso acompañamos a nuestros clientes en un proceso educativo: identificamos las oportunidades y fallas de sus espacios actuales y mostramos cómo una intervención consciente puede transformar su vida cotidiana. Esto genera una relación más profunda y colaborativa, basada en comprensión y confianza.',
-    
+    'projects.title': 'Proyectos',
     'projects.viewall': 'ver todo',
     'projects.filter.all': 'Todos',
     'projects.residential': 'PROYECTOS RESIDENCIALES',
@@ -56,7 +56,10 @@ const translations = {
     'contact.address': 'Dirección',
     'contact.email': 'Email',
     'contact.phone': 'Teléfono',
-    "all_rights_reserved": "Todos los derechos reservados"
+    "all_rights_reserved": "Todos los derechos reservados",
+    'projects': {
+      title: 'Proyectos'
+    }
   },
   fr: {
     'nav.projects': 'PROJETS',
@@ -105,7 +108,10 @@ const translations = {
     'contact.address': 'Adresse',
     'contact.email': 'E-mail',
     'contact.phone': 'Téléphone',
-    "all_rights_reserved": "Tous droits réservés"
+    "all_rights_reserved": "Tous droits réservés",
+    "projects": {
+        title: 'Projets'
+      }
 }
 ,
   en: {
