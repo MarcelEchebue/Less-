@@ -9,9 +9,9 @@ export function StoreSection({ onNavigate }: StoreSectionProps) {
   const { t } = useLanguage();
 
   const highlightedText = t('store.description').replace(
-    /(arquitectura|libros|publicaciones|reflexiones|humanista|escritura)/gi,
-    '<strong>$1</strong>'
-  );
+  /(arquitectura|libros|publicaciones|reflexiones|humanista|escritura)/gi,
+  '<span class="font-bold text-brand-primary">' + '$1' + '</span>'
+);
 
   return (
     <section id="store" className="bg-surface-white py-20">
@@ -34,7 +34,7 @@ export function StoreSection({ onNavigate }: StoreSectionProps) {
           {/* Content */}
           <div className="max-w-2xl">
             <div 
-              className="text-xl md:text-2xl text-text-primary leading-relaxed"
+              className="text-sm md:text-2xl text-text-primary leading-relaxed"
               dangerouslySetInnerHTML={{ __html: highlightedText }}
             />
           </div>

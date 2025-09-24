@@ -147,7 +147,7 @@ export const projectsDetails = {
                                 </div>
                             ),
                             
-                            top:"5%", // 👈 misma altura que el otro texto
+                            top:"2%", // 👈 misma altura que el otro texto
                             right:"45%", // 👈 alineado a la derecha
                             className: "drop-shadow-md",
                         }
@@ -446,15 +446,22 @@ export const projectsDetails = {
                         },
                         {
                             es: (
-                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                        "EL <span className="font-bold">EQUILIBRIO</span> y <span className="font-bold">ARMONIA </span>
-                                        ENTRE <span className="font-bold">PRESENTE</span> Y <span className="font-bold">PASADO</span> ES POSIBLE”
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        "EL <span className="font-bold">EQUILIBRIO</span>
+                                        <br className="block md:hidden" /> Y
+                                        <span className="font-bold"> ARMONIA</span>
+                                        <br className="block md:hidden" /> ENTRE
+                                        <br className="block md:hidden" />
+                                        <span className="font-bold"> PRESENTE </span>Y
+                                        <br className="block md:hidden" />
+                                        <span className="font-bold"> PASADO</span> ES
+                                        <br className="block md:hidden" />POSIBLE”
                                     </p>
-                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         Los acabados en <span className="font-bold">materiales naturales</span> como el <span className="font-bold">chukún</span> y la <span className="font-bold">piedra</span> son el broche con el que se consuma la intención.
                                     </p>
-                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         El contraste en la fachada entre la planta baja y la primera planta representa la armonía entre lo <span className="font-bold">vernacular</span> (representado por la <span className="font-bold">piedra</span>) y lo <span className="font-bold">contemporáneo</span> (representado por el <span className="font-bold">blanco del chukún</span>). Y la elección se basa en el sentido <span className="font-bold">ornamental</span> representado por la <span className="font-bold">rugosidad</span> de la piedra y la tendencia a una <span className="font-bold">omogeneidad</span> contemporánea que tiende cada vez más al <span className="font-bold">minimalísmo</span>.
                                     </p>
                                 </div>
@@ -462,13 +469,20 @@ export const projectsDetails = {
                             fr: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
                                     <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                        "L’<span className="font-bold">ÉQUILIBRE</span> ET L’<span className="font-bold">HARMONIE </span>
-                                        ENTRE LE <span className="font-bold">PRÉSENT</span> ET LE <span className="font-bold">PASSÉ</span> SONT POSSIBLES”
+                                        "L'<span className="font-bold">ÉQUILIBRE</span>
+                                        <br className="block md:hidden" /> ET
+                                        <span className="font-bold"> L'HARMONIE</span>
+                                        <br className="block md:hidden" /> ENTRE
+                                        <br className="block md:hidden" />
+                                        <span className="font-bold"> PRÉSENT </span>ET
+                                        <br className="block md:hidden" />
+                                        <span className="font-bold"> PASSÉ</span> SONT
+                                        <br className="block md:hidden" />POSSIBLES”
                                     </p>
-                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         Les finitions en <span className="font-bold">matériaux naturels</span> tels que le <span className="font-bold">chukún</span> et la <span className="font-bold">pierre</span> sont la touche finale qui concrétise l’intention.
                                     </p>
-                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         Le contraste sur la façade entre le rez-de-chaussée et le premier étage représente l’harmonie entre le <span className="font-bold">vernaculaire</span> (représenté par la <span className="font-bold">pierre</span>) et le <span className="font-bold">contemporain</span> (représenté par le <span className="font-bold">blanc du chukún</span>). Ce choix repose sur le sens <span className="font-bold">ornemental</span> représenté par la <span className="font-bold">rugosité</span> de la pierre et la tendance vers une <span className="font-bold">homogénéité</span> contemporaine qui tend de plus en plus vers le <span className="font-bold">minimalisme</span>.
                                     </p>
                                 </div>
@@ -476,13 +490,20 @@ export const projectsDetails = {
                             en: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
                                     <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                        "THE <span className="font-bold">BALANCE</span> & <span className="font-bold">HARMONY </span>
-                                        BETWEEN <span className="font-bold">PRESENT</span> AND <span className="font-bold">PAST</span> IS POSSIBLE”
+                                        "THE <span className="font-bold">BALANCE</span>
+                                        <br className="block md:hidden" /> AND
+                                        <span className="font-bold"> HARMONY</span>
+                                        <br className="block md:hidden" /> BETWEEN
+                                        <br className="block md:hidden" />
+                                        <span className="font-bold"> PRESENT </span>AND
+                                        <br className="block md:hidden" />
+                                        <span className="font-bold"> PAST</span> IS
+                                        <br className="block md:hidden" />POSSIBLE”
                                     </p>
-                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         The finishes in <span className="font-bold">natural materials</span> such as <span className="font-bold">chukún</span> and <span className="font-bold">stone</span> are the final touch that fulfills the design’s intent.
                                     </p>
-                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         The contrast on the façade between the ground floor and the first floor represents the harmony between the <span className="font-bold">vernacular</span> (represented by the <span className="font-bold">stone</span>) and the <span className="font-bold">contemporary</span> (represented by the <span className="font-bold">white of the chukún</span>). The choice is based on the <span className="font-bold">ornamental</span> sense represented by the <span className="font-bold">roughness</span> of the stone and the contemporary tendency towards an increasing <span className="font-bold">homogeneity</span> that moves closer and closer to <span className="font-bold">minimalism</span>.
                                     </p>
                                 </div>

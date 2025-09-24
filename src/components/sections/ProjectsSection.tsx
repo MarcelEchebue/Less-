@@ -41,34 +41,37 @@ export function ProjectsSection({ onNavigate }: ProjectsSectionProps) {
       style={{ backgroundImage: `url(${projectsBackground})` }}
     >
       <div className="absolute inset-0 bg-black/50" />
-
       <div className="relative z-10 container mx-auto px-6">
         {/* Eliminamos el título y el botón "ver todo" */}
-
         <div className="space-y-12">
           {projectCategories.map((category) => (
             <div key={category} className="space-y-6">
               {/* Encabezado de categoría */}
               <div className="flex items-center gap-2">
+                {/* Título de la categoría en Roboto Light */}
                 <button
                   onClick={() =>
                     setSelectedCategory(selectedCategory === category ? null : category)
                   }
-                  className={`text-xl md:text-2xl font-medium tracking-wide transition-all underline decoration-brand-accent/50 underline-offset-[6px] hover:decoration-brand-accent/30 ${
-                    selectedCategory === category 
-                      ? 'text-brand-accent' 
+                  className={`text-xl md:text-2xl tracking-wide transition-all underline decoration-brand-accent/50 underline-offset-[6px] hover:decoration-brand-accent/30 
+      font-roboto font-light
+      ${selectedCategory === category
+                      ? 'text-brand-accent'
                       : 'text-text-inverse hover:text-brand-accent'
-                  }`}
+                    }`}
                 >
                   {t(`projects.${category}`)}
                 </button>
-                {/* Botón + que lleva directo a la categoría */}
+
+                {/* Signo + en Roboto Bold */}
                 <Button
                   variant="ghost"
                   onClick={() => onNavigate(`projects-${category}`)}
                   className="text-text-inverse hover:text-brand-accent p-0"
                 >
-                  <Plus size={24} />
+                  <span className="font-roboto font-bold text-xl md:text-2xl">
+                    +
+                  </span>
                 </Button>
               </div>
 

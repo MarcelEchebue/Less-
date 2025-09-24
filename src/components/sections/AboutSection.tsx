@@ -43,7 +43,7 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
           {/* Description */}
           <div className="md:pt-4 lg:pt-8">
             <div 
-              className="text-base md:text-lg lg:text-xl text-text-primary leading-relaxed text-justify space-y-6"
+              className="text-sm md:text-xl text-text-primary leading-relaxed"
               dangerouslySetInnerHTML={{ __html: t('about.description') }}
             />
           </div>

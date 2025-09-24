@@ -14,9 +14,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
   const tagline = t('hero.tagline'); // "Menos forma, más significado" tanto en español como en francés e inglés
   const highlightedTagline = tagline
     //.replace('M', '<strong class="font-semibold text-white">M</strong>')
-    .replace('L', '<strong class="font-semibold text-white">L</strong>')
-    .replace('p', '<strong class="font-semibold text-white">p</strong>')
-    
+        
     .replace('forma', '<strong class="font-semibold text-white">forma</strong>')
     .replace('significado', '<strong class="font-semibold text-white">significado</strong>')
     .replace('forme', '<strong class="font-semibold text-white">forme</strong>')
@@ -37,9 +35,11 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
       <div className="relative z-10 container mx-auto px-6 pb-20 flex justify-center">
         <div className="text-center">
           {/* Main Brand */}
-          <h1 className="text-6xl md:text-8xl font-bold text-text-inverse mb-6 tracking-wider">
-            LESS +
+          <h1 className="text-6xl md:text-8xl mb-6 tracking-wider text-text-inverse">
+            <span className="font-roboto font-light">LESS</span>
+            <span className="font-bold">+</span>
           </h1>
+
           
           {/* Tagline con palabras en blanco y negrita */}
           <p

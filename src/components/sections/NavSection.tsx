@@ -27,7 +27,8 @@ export function NavSection({ onNavigate }: NavSectionProps) {
       title: t('nav.consciousness.title'),
       content: t('nav.consciousness.text'),
       highlights: ['Muchos desconocen lo que realmente pueden esperar de un arquitecto', 'Muchos desconocen lo que realmente pueden esperar de un arquitecto']//las palabras a resaltar
-    }
+    },
+    
   ];
 
   const highlightText = (text: string, highlights: string[]) => {
@@ -88,11 +89,11 @@ export function NavSection({ onNavigate }: NavSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {sections.map((section, index) => (
             <div key={index} className="space-y-6">
-              <h2 className="text-xl font-bold text-brand-primary tracking-wide leading-tight">
+              <h2 className="text-sm md:text-xl text-text-primary leading-relaxed">
                 {section.title}
               </h2>
               <div 
-                className="text-base text-text-primary leading-relaxed"
+                className="text-sm md:text-xl text-text-primary leading-relaxed"
                 dangerouslySetInnerHTML={{ 
                   __html: highlightText(section.content, section.highlights) 
                 }}

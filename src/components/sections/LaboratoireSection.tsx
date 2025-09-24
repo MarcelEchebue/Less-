@@ -10,7 +10,7 @@ export function LaboratoireSection({ onNavigate }: LaboratoireSectionProps) {
 
   const highlightedText = t('research.description').replace(
     /(experimentamos|laboratorio|neuroarquitectura|psicología espacial|antropología|espacios)/gi,
-    '<strong>$1</strong>'
+    '<span class="font-bold text-brand-primary">' + '$1' + '</span>'
   );
 
   return (
@@ -34,7 +34,7 @@ export function LaboratoireSection({ onNavigate }: LaboratoireSectionProps) {
           {/* Content */}
           <div className="max-w-2xl">
             <div 
-              className="text-xl md:text-2xl text-text-primary leading-relaxed"
+              className="text-sm md:text-2xl text-text-primary leading-relaxed"
               dangerouslySetInnerHTML={{ __html: highlightedText }}
             />
           </div>
