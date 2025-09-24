@@ -38,14 +38,20 @@ export function NavSection({ onNavigate }: NavSectionProps) {
       highlightedText = highlightedText.replace(regex, '<strong>$1</strong>');
     });
     return highlightedText;
+
+    
   };
+
+  const highlightedNavText = t('nav.description').replace(
+    /(arquitectura| L’ARCHITECTURE| ARCHITECTURE|\s\+\s| hacer| FAIRE| DO| por ti| pour toi| FOR YOU|tÚ lugar| TON ESPACE| YOUR PLACE| paredes| MURS| WALLS| techos| TOITS| CEILINGS| humana| HUMAINE| HUMAN| coherente| COHÉRENTE| COHERENT| esencial| ESSENTIELLE| ESSENTIAL| psicología espacial|rigor técnico)/gi,
+    '<span class="font-bold text-brand-primary">$1</span>'
+  );
 
   return (
     <section id="nav" className="bg-surface-white py-20">
       <div className="container mx-auto px-6">
         {/* Navigation Links */}
         <div className="flex flex-row items-center justify-center space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8 mb-16 border-b border-border pb-8 px-3 sm:px-4 md:px-6">
-
           <button
             onClick={() => onNavigate('projects')}
             className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-brand-primary hover:text-brand-accent transition-fast tracking-wide"
@@ -80,9 +86,10 @@ export function NavSection({ onNavigate }: NavSectionProps) {
 
         {/* Main Description */}
         <div className="max-w-4xl mx-auto text-center mb-20">
-          <p className="text-2xl md:text-3xl font-medium text-brand-primary leading-relaxed tracking-wide">
-            {t('nav.description')}
-          </p>
+          <p
+            className="text-2xl md:text-2xl text-brand-primary leading-relaxed tracking-wide"
+            dangerouslySetInnerHTML={{ __html: highlightedNavText }}
+          />
         </div>
 
         {/* Content Sections */}

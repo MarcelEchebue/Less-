@@ -1,20 +1,11 @@
-import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Header } from '@/components/Header';
 import { useLanguage } from '@/contexts/LanguageContext';
 import projectsBackground from '@/assets/backgroundproject.jpg';
 import casapatio1 from '@/assets/projects/Residenciales/CasaPatio/Casa-Patio1.jpg';
 import elcubo1 from '@/assets/projects/Residenciales/ElCubo/El-Cubo1.jpg';
 import casagenesis1 from '@/assets/projects/Residenciales/CasaGenesis/Casa-Genesis1.jpg';
-// Importa más imágenes según sea necesario
-import residential1 from '@/assets/residential-1.jpg';
-import residential2 from '@/assets/residential-2.jpg';
-import cultural1 from '@/assets/cultural-1.jpg';
-import administrative1 from '@/assets/administrative-1.jpg';
-
-interface AllProjectsProps {
-    onNavigate: (section: string) => void;
-}
 
 const projectCategories = ['all', 'residential', 'cultural', 'administrative', 'educational', 'industrial', 'urban'];
 
@@ -23,21 +14,23 @@ const projectsData = {
         { title: "Casa Patio", image: casapatio1 },
         { title: "El Cubo", image: elcubo1 },
         { title: "Casa Genesis", image: casagenesis1 },
-       // { title: "Villa Moderne", image: residential1 },
-       // { title: "Résidence Urbaine", image: residential2 },
-    ],
-    cultural: [
-        //{ title: "Centre Culturel", image: cultural1 },
-    ],
-    administrative: [
-       // { title: "Bureau Municipal", image: administrative1 },
     ]
-    // puedes seguir añadiendo
 };
 
-export function AllProjects({ onNavigate }: AllProjectsProps) {
+export function AllProjects() {
     const { t } = useLanguage();
+    const location = useLocation();
+    const navigate = useNavigate(); // ✅ para poder navegar si lo necesitas
+
     const [selectedCategory, setSelectedCategory] = useState('all');
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const category = params.get("category");
+        if (category && projectCategories.includes(category)) {
+            setSelectedCategory(category);
+        }
+    }, [location.search]);
 
     const getFilteredProjects = () => {
         if (selectedCategory === 'all') {
@@ -50,7 +43,7 @@ export function AllProjects({ onNavigate }: AllProjectsProps) {
 
     return (
         <div className="min-h-screen bg-white">
-            <Header onNavigate={onNavigate} />
+            <Header onNavigate={(path) => navigate(path)} /> {/* ✅ aquí sigue funcionando */}
 
             {/* Hero Section */}
             <section
@@ -71,8 +64,8 @@ export function AllProjects({ onNavigate }: AllProjectsProps) {
                             key={cat}
                             onClick={() => setSelectedCategory(cat)}
                             className={`uppercase tracking-wide transition 
-                            text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 
-                            ${selectedCategory === cat
+              text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 
+              ${selectedCategory === cat
                                     ? 'border-b-2 border-black font-semibold'
                                     : 'text-gray-500 hover:text-black'}`}
                         >
@@ -82,13 +75,12 @@ export function AllProjects({ onNavigate }: AllProjectsProps) {
                 </div>
             </section>
 
-
             {/* Projects Grid */}
             <section className="py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12">
                     {filteredProjects.length > 0 ? (
                         filteredProjects.map((project, index) => {
-                            const slug = project.title.toLowerCase().replace(/\s+/g, "-"); // genera slug
+                            const slug = project.title.toLowerCase().replace(/\s+/g, "-");
                             const category = selectedCategory === "all"
                                 ? Object.keys(projectsData).find(cat =>
                                     projectsData[cat as keyof typeof projectsData].includes(project)
@@ -98,7 +90,7 @@ export function AllProjects({ onNavigate }: AllProjectsProps) {
                             return (
                                 <Link
                                     key={index}
-                                    to={`/all-projects/${category}/${slug}`}  // ✅ CORREGIDO
+                                    to={`/all-projects/${category}/${slug}`}
                                     className="group relative overflow-hidden block"
                                 >
                                     <img
@@ -121,7 +113,6 @@ export function AllProjects({ onNavigate }: AllProjectsProps) {
                     )}
                 </div>
             </section>
-
         </div>
     );
 }

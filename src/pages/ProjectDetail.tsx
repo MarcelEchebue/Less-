@@ -74,7 +74,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Menos <span className="font-bold">forma</span>, más <span className="font-bold">significado</span>”
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
                                     </p>
                                 </div>
                             ),
@@ -84,7 +84,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Moins de <span className="font-bold">forme</span>, plus de <span className="font-bold">sens</span>”
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
                                     </p>
                                 </div>
                             ),
@@ -94,12 +94,12 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Less <span className="font-bold">form</span>, more <span className="font-bold">meaning</span>”
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
                                     </p>
                                 </div>
                             ),
                             bottom: "10%",
-                            right: "25%",
+                            right: "27%",
                             transform: "translateX(10%)",
                             className: "drop-shadow-md",
                         }
@@ -375,7 +375,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Menos <span className="font-bold">forma</span>, más <span className="font-bold">significado</span>”
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
                                     </p>
                                 </div>
                             ),
@@ -385,7 +385,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Moins de <span className="font-bold">forme</span>, plus de <span className="font-bold">sens</span>”
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
                                     </p>
                                 </div>
                             ),
@@ -395,7 +395,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Less <span className="font-bold">form</span>, more <span className="font-bold">meaning</span>”
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
                                     </p>
                                 </div>
                             ),
@@ -666,7 +666,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Menos <span className="font-bold">forma</span>, más <span className="font-bold">significado</span>”
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
                                     </p>
                                 </div>
                             ),
@@ -676,7 +676,7 @@ export const projectsDetails = {
                                         LESS<span className="font-bold">+</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
-                                        “Moins de <span className="font-bold">forme</span>, plus de <span className="font-bold">sens</span>”
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
                                     </p>
                                 </div>
                             ),
@@ -686,7 +686,7 @@ export const projectsDetails = {
                                         THE
                                     </p>
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        “Less <span className="font-bold">form</span>, more <span className="font-bold">meaning</span>”
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
                                     </p>
                                 </div>
                             ),
@@ -771,7 +771,7 @@ export const projectsDetails = {
                                     <p><span className="font-bold">Project phase:</span> Design</p>
                                 </div>
                             ),
-                            top: "6%", // 👈 misma altura que el otro texto
+                            top: "5%", // 👈 misma altura que el otro texto
                             left: "52%", // 👈 alineado a la derecha
                             className:
                                 "text-sm md:text-base text-white drop-shadow-md leading-snug",

@@ -8,7 +8,7 @@ import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import { StoreSection } from '@/components/sections/StoreSection';
 import { LaboratoireSection } from '@/components/sections/LaboratoireSection';
 import { AboutSection } from '@/components/sections/AboutSection';
-import { ContactSection } from '@/components/sections/ContactSection';
+
 
 const Index = () => {
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
@@ -47,11 +47,10 @@ const Index = () => {
         <main>
           <HeroSection onNavigate={handleNavigation} />
           <NavSection onNavigate={handleNavigation} />
-          <ProjectsSection onNavigate={handleNavigation} />
+          <ProjectsSection onNavigate={(path) => navigate(path)} /> {/* ✅ Ahora sí navega */}
           <StoreSection onNavigate={handleNavigation} />
           <LaboratoireSection onNavigate={handleNavigation} />
           <AboutSection onNavigate={handleNavigation} />
-          <ContactSection />
         </main>
       </div>
     </LanguageProvider>
