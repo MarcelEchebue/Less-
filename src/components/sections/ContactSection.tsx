@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Send, Instagram, Linkedin, Github, Youtube } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Instagram, Linkedin, Youtube, Github } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Header } from "@/components/Header";
 
-export default function ContactPage() {
+
+interface ContactSectionProps {
+    onNavigate: (section: string) => void;
+}
+
+export default function ContactSection({ onNavigate }: ContactSectionProps) {
     const { t } = useLanguage();
     const { toast } = useToast();
     const [formData, setFormData] = useState({
@@ -39,6 +44,9 @@ export default function ContactPage() {
             <Header />
 
             {/* Contenido principal */}
+            <section id="contact" className="bg-surface-warm py-20">
+
+            
             <main className="flex-1 pt-32 px-6">
                 <div className="max-w-6xl mx-auto">
                     {/* Título */}
@@ -46,9 +54,6 @@ export default function ContactPage() {
                         <h2 className="text-4xl md:text-6xl font-bold text-brand-primary tracking-wider mb-6">
                             {t("contact.title")}
                         </h2>
-                        <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-                            Transformons ensemble votre vision architecturale en réalité
-                        </p>
                     </div>
 
                     {/* Grid de información + formulario */}
@@ -70,7 +75,7 @@ export default function ContactPage() {
                                         </h4>
                                         <p className="text-text-secondary">
                                             Dakar, Sénégal <br />
-                                            Plateau, Avenue Léopold Sédar Senghor
+                                            Malabo, Guinea Ecuatorial
                                         </p>
                                     </div>
                                 </div>
@@ -84,7 +89,7 @@ export default function ContactPage() {
                                             {t("contact.email")}
                                         </h4>
                                         <p className="text-text-secondary">
-                                            contact@lessplus.architecture
+                                            info@lessmas.es
                                         </p>
                                     </div>
                                 </div>
@@ -97,7 +102,7 @@ export default function ContactPage() {
                                         <h4 className="font-medium text-brand-primary mb-2">
                                             {t("contact.phone")}
                                         </h4>
-                                        <p className="text-text-secondary">+221 77 123 45 67</p>
+                                        <p className="text-text-secondary">+221 76 302 28 90</p>
                                     </div>
                                 </div>
                             </div>
@@ -152,30 +157,32 @@ export default function ContactPage() {
                     </div>
                 </div>
             </main>
+            </section>
 
             {/* ✅ Footer con redes sociales */}
             <footer className="bg-surface-white mt-20 py-8">
                 <div className="flex flex-col items-center space-y-4">
+                    <p className="text-sm text-gray-500">
+                        ERO © {new Date().getFullYear()} .
+                    </p>
                     <div className="flex space-x-6">
-                        <a href="https://www.instagram.com/less.mas" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/mmbila.e" target="_blank" rel="noopener noreferrer">
                             <Instagram className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
-                        <a href="https://github.com/MarcelEchebue" target="_blank" rel="noopener noreferrer">
-                            <Github className="text-brand-primary hover:text-brand-accent" size={28} />
+                        <a href="https://github.com/MarcelEchebue" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
+                            <Github size={28} />
                         </a>
+                        
                         <a href="mailto:echebuemarcelino@gmail.com">
                             <Mail className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
                         <a href="https://www.linkedin.com/in/marcelino-ebang-echebue-3920181a3" target="_blank" rel="noopener noreferrer">
                             <Linkedin className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
-                        <a
-                            href="https://www.youtube.com/@lessmasddr" target="_blank" rel="noopener noreferrer">
-                            <Youtube className="text-brand-primary hover:text-brand-accent" size={28} />
-                        </a>
+                        
                     </div>
                     <p className="text-sm text-gray-500">
-                        © {new Date().getFullYear()} LESS+. Tous droits réservés.
+                        Web Developper  
                     </p>
                 </div>
             </footer>

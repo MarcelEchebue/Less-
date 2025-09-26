@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronUp, Instagram, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, ChevronUp, Instagram, Mail, Youtube } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -49,8 +49,12 @@ export function Header({ onNavigate }: HeaderProps) {
     } else if (section === 'research') {
       navigate('/research');
     } else if (section === 'contact') {
-      navigate('/contact');
-    } else if (onNavigate) {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    else if (onNavigate) {
       onNavigate(section);
     }
   };
@@ -61,8 +65,8 @@ export function Header({ onNavigate }: HeaderProps) {
 
   return (
     <>
-      {/* Fixed Header */}
-      <header className="fixed top-0 left-0 w-full z-50 ">
+      {/* Header transparente */}
+      <header className="fixed top-0 left-0 w-full z-50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           {/* Language Switcher */}
           <div className={`flex items-center space-x-2 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
@@ -97,12 +101,12 @@ export function Header({ onNavigate }: HeaderProps) {
             </div>
           )}
 
-          {/* Hamburger Menu */}
+          {/* Botón Menú → cambia entre Menu y X */}
           <Button
             variant="ghost"
             size="sm"
             onClick={toggleMenu}
-            className="p-2 hover:bg-surface-neutral relative z-10 "
+            className="p-2 hover:bg-surface-neutral relative z-50"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
@@ -136,27 +140,32 @@ export function Header({ onNavigate }: HeaderProps) {
           {/* Texto traducido + Redes Sociales */}
           <div className="flex flex-col items-center space-y-2 pb-6">
             <p className="text-sm text-gray-500">
-              {t("all_rights_reserved")}
+              {t("social_media_reserved")}
             </p>
 
             <div className="flex justify-center space-x-6">
-              <a href="https://www.instagram.com/mmbila.e" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
+              <a href="https://www.instagram.com/less.mas" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
                 <Instagram size={28} />
               </a>
-              <a href="https://github.com/MarcelEchebue" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
-                <Github size={28} />
+              <a
+                href="https://www.tiktok.com/@less.mas" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className="w-7 h-7"
+                >
+                  <path d="M224 72.45a72.1 72.1 0 0 1-40-12.07V160a64 64 0 1 1-64-64 8 8 0 0 1 0 16 48 48 0 1 0 48 48V32a8 8 0 0 1 12.42-6.72A56.09 56.09 0 0 0 224 72a8 8 0 0 1 0 16Z" />
+                </svg>
               </a>
-              <a href="mailto:echebuemarcelino@gmail.com" className="hover:text-brand-primary">
+              <a
+                href="https://www.youtube.com/@lessmasddr" target="_blank" rel="noopener noreferrer">
+                <Youtube className="text-brand-primary hover:text-brand-accent" size={28} />
+              </a>
+              <a href="mailto:" className="hover:text-brand-primary">
                 <Mail size={28} />
-              </a>
-              <a href="https://www.linkedin.com/in/marcelino-ebang-echebue-3920181a3" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
-                <Linkedin size={28} />
               </a>
             </div>
           </div>
         </div>
       )}
-
 
       {/* Scroll to Top Button */}
       {showScrollButton && (

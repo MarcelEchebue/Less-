@@ -43,7 +43,7 @@ export function NavSection({ onNavigate }: NavSectionProps) {
   };
 
   const highlightedNavText = t('nav.description').replace(
-    /(arquitectura| L’ARCHITECTURE| ARCHITECTURE|\s\+\s| hacer| FAIRE| DO| por ti| pour toi| FOR YOU|tÚ lugar| TON ESPACE| YOUR PLACE| paredes| MURS| WALLS| techos| TOITS| CEILINGS| humana| HUMAINE| HUMAN| coherente| COHÉRENTE| COHERENT| esencial| ESSENTIELLE| ESSENTIAL| psicología espacial|rigor técnico)/gi,
+    /(arquitectura| L’ARCHITECTURE| ARCHITECTURE|\s\+\s| hacer| FAIRE| DO| por ti| pour toi| FOR YOU|tu lugar| TON ESPACE| YOUR PLACE| paredes| MURS| WALLS| techos| TOITS| CEILINGS| humana| HUMAINE| HUMAN| coherente| COHÉRENTE| COHERENT| esencial| ESSENTIELLE| ESSENTIAL| psicología espacial|rigor técnico)/gi,
     '<span class="font-bold text-brand-primary">$1</span>'
   );
 

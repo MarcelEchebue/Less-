@@ -71,7 +71,7 @@ export const projectsDetails = {
                             es: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
@@ -81,7 +81,7 @@ export const projectsDetails = {
                             fr: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-sx md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
@@ -91,7 +91,7 @@ export const projectsDetails = {
                             en: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
@@ -372,7 +372,7 @@ export const projectsDetails = {
                             es: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
@@ -382,7 +382,7 @@ export const projectsDetails = {
                             fr: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-sx md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
@@ -392,7 +392,7 @@ export const projectsDetails = {
                             en: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
@@ -663,7 +663,7 @@ export const projectsDetails = {
                             es: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
@@ -673,7 +673,7 @@ export const projectsDetails = {
                             fr: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        LESS<span className="font-bold">+</span>
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-2xl font-light text-black">
                                         “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
@@ -683,7 +683,7 @@ export const projectsDetails = {
                             en: (
                                 <div className="flex flex-col text-center">
                                     <p className="text-xs md:text-4xl font-light text-black">
-                                        THE
+                                        LESS<span className="font-bold"> +</span>
                                     </p>
                                     <p className="text-xs md:text-4xl font-light text-black">
                                         “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”

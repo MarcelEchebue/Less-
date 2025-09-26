@@ -16,7 +16,7 @@ const translations = {
     'nav.about': 'NOSOTROS',
     'nav.contact': 'CONTACTO',
     'hero.tagline': 'Menos forma, Más significado',
-    'nav.description': 'LESS + ES TÚ LUGAR PARA DESCUBRIR LO QUE LA ARQUITECTURA PUEDE HACER POR TI, MÁS ALLÁ DE PAREDES Y TECHOS: UNA EXPERIENCIA HUMANA, COHERENTE Y ESENCIAL.',
+    'nav.description': 'LESS + ES TU LUGAR PARA DESCUBRIR LO QUE LA ARQUITECTURA PUEDE HACER POR TI, MÁS ALLÁ DE PAREDES Y TECHOS: UNA EXPERIENCIA HUMANA, COHERENTE Y ESENCIAL.',
     'nav.transformative.title': 'UNA ARQUITECTURA QUE TRANSFORMA',
     'nav.transformative.text': 'Nuestro enfoque parte de la premisa de que la arquitectura no solo construye espacios, sino que transforma la manera en que vivimos, sentimos y nos relacionamos con nuestro entorno. Cada proyecto nace del entendimiento profundo de la persona: sus necesidades, hábitos, emociones y contexto. No nos limitamos a cumplir programas; buscamos generar espacios que tengan un impacto positivo y tangible en la vida diaria.',
     'nav.method.title': 'MÉTODO INTERDISCIPLINARIO',
@@ -25,7 +25,7 @@ const translations = {
     'nav.rigor.text': 'Nuestro proceso combina rigor técnico, sensibilidad estética y reflexión poética. Analizamos el contexto social, cultural y económico para garantizar coherencia y pertinencia. Evitamos lo superfluo y nos centramos en lo esencial, creando proyectos únicos donde funcionalidad, belleza y emoción se encuentran, y donde las artes se integran de manera orgánica.',
     'nav.consciousness.title': 'CONCIENCIA Y COLABORACIÓN',
     'nav.consciousness.text': 'Muchos desconocen lo que realmente pueden esperar de un arquitecto. Por eso acompañamos a nuestros clientes en un proceso educativo: identificamos las oportunidades y fallas de sus espacios actuales y mostramos cómo una intervención consciente puede transformar su vida cotidiana. Esto genera una relación más profunda y colaborativa, basada en comprensión y confianza.',
-    'projects.title': 'Proyectos',
+    'projects.title': 'PROYECTOS',
     'projects.viewall': 'ver todo',
     'projects.filter.all': 'Todos',
     'projects.residential': 'PROYECTOS RESIDENCIALES',
@@ -40,7 +40,7 @@ const translations = {
     'projects.filter.industrial': 'Industrial',
     'projects.urban': 'PROYECTOS URBANOS',
     'projects.filter.urban': 'Urbano',
-    'store.title': 'TIENDA',
+    'store.title': 'TIENDA ',
     'store.link': 'Ir a Tienda',
     'store.description': 'En LESS+ la arquitectura también se escribe. En la tienda encontrarás libros y publicaciones que recogen reflexiones, ideas y relatos creados desde el mismo enfoque humanista que guía nuestros proyectos. Un espacio donde la práctica arquitectónica se conecta con la escritura.',
     'research.title': 'LABORATORIO +',
@@ -56,7 +56,7 @@ const translations = {
     'contact.address': 'Dirección',
     'contact.email': 'Email',
     'contact.phone': 'Teléfono',
-    "all_rights_reserved": "Todos los derechos reservados",
+    "social_media_reserved": "Síguenos en:",
     'projects': {
       title: 'Proyectos'
     }
@@ -77,7 +77,7 @@ const translations = {
     'nav.rigor.text': 'Notre processus combine rigueur technique, sensibilité esthétique et réflexion poétique. Nous analysons le contexte social, culturel et économique pour garantir cohérence et pertinence. Nous évitons le superflu et nous concentrons sur l’essentiel, créant des projets uniques où fonctionnalité, beauté et émotion se rencontrent, et où les arts s’intègrent de manière organique.',
     'nav.consciousness.title': 'CONSCIENCE ET COLLABORATION',
     'nav.consciousness.text': 'Beaucoup ignorent ce qu’ils peuvent réellement attendre d’un architecte. C’est pourquoi nous accompagnons nos clients dans un processus éducatif : nous identifions les opportunités et les failles de leurs espaces actuels et montrons comment une intervention consciente peut transformer leur quotidien. Cela génère une relation plus profonde et collaborative, fondée sur la compréhension et la confiance.',
-    'projects.title': 'Projets',
+    'projects.title': 'PROJETS',
     'projects.viewall': 'voir tout',
     'projects.filter.all': 'Tous',
     'projects.residential': 'PROJETS RESIDENTIELS',
@@ -108,7 +108,7 @@ const translations = {
     'contact.address': 'Adresse',
     'contact.email': 'E-mail',
     'contact.phone': 'Téléphone',
-    "all_rights_reserved": "Tous droits réservés",
+    "social_media_reserved": "Suivez-nous sur :",
     "projects": {
         title: 'Projets'
       }
@@ -130,7 +130,7 @@ const translations = {
     'nav.rigor.text': 'Our process combines technical rigor, aesthetic sensitivity and poetic reflection. We analyze the social, cultural and economic context to ensure coherence and relevance. We avoid the superfluous and focus on the essential, creating unique projects where functionality, beauty and emotion meet, and where the arts are integrated organically.',
     'nav.consciousness.title': 'CONSCIOUSNESS AND COLLABORATION',
     'nav.consciousness.text': 'Many do not know what they can really expect from an architect. That is why we accompany our clients in an educational process: we identify the opportunities and failures of their current spaces and show how a conscious intervention can transform their daily life. This generates a deeper and more collaborative relationship, based on understanding and trust.',
-    'projects.title': 'Projects',
+    'projects.title': 'PROJECTS',
     'projects.viewall': 'view all',
     'projects.filter.all': 'All',
     'projects.residential': 'RESIDENTIAL PROJECTS',
@@ -160,7 +160,7 @@ const translations = {
     'contact.address': 'Address',
     'contact.email': 'Email',
     'contact.phone': 'Phone',
-    "all_rights_reserved": "All rights reserved"
+    "social_media_reserved": "Follow us on:"
   }
 };
 

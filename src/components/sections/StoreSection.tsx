@@ -22,13 +22,14 @@ export function StoreSection({ onNavigate }: StoreSectionProps) {
             <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-wider mb-4">
               {t('store.title')}
             </h2>
+            {/*Boton para poner enlace e ir a tienda 
             <Button
               variant="ghost"
               onClick={() => onNavigate('store')}
               className="text-brand-accent hover:text-brand-primary transition-fast text-lg underline decoration-2 underline-offset-4 p-0 h-auto"
             >
               {t('store.link')}
-            </Button>
+            </Button>*/}
           </div>
 
           {/* Content */}

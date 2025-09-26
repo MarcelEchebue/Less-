@@ -22,13 +22,14 @@ export function LaboratoireSection({ onNavigate }: LaboratoireSectionProps) {
             <h2 className="text-3xl md:text-4xl font-bold text-brand-primary tracking-wider mb-4">
               {t('research.title')}
             </h2>
+            {/* Boton para poner enlace e ir a laboratorio 
             <Button
               variant="ghost"
               onClick={() => onNavigate('research')}
               className="text-brand-accent hover:text-brand-primary transition-fast text-lg underline decoration-2 underline-offset-4 p-0 h-auto"
             >
               {t('research.link')}
-            </Button>
+            </Button>*/}
           </div>
 
           {/* Content */}

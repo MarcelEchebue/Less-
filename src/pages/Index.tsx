@@ -8,6 +8,7 @@ import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import { StoreSection } from '@/components/sections/StoreSection';
 import { LaboratoireSection } from '@/components/sections/LaboratoireSection';
 import { AboutSection } from '@/components/sections/AboutSection';
+import  ContactSection  from '@/components/sections/ContactSection';
 
 
 const Index = () => {
@@ -51,6 +52,7 @@ const Index = () => {
           <StoreSection onNavigate={handleNavigation} />
           <LaboratoireSection onNavigate={handleNavigation} />
           <AboutSection onNavigate={handleNavigation} />
+          <ContactSection onNavigate={handleNavigation} />
         </main>
       </div>
     </LanguageProvider>
