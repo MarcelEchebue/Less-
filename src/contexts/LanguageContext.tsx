@@ -56,6 +56,11 @@ const translations = {
     'contact.address': 'Dirección',
     'contact.email': 'Email',
     'contact.phone': 'Teléfono',
+    'contact.form.title': 'Iniciemos tu proyecto',
+    'contact.form.name': 'Nombre: Juan Pérez',
+    'contact.form.email': 'Tu correo: juanperez@example.com',
+    'contact.form.message': 'Cuéntanos sobre tu proyecto...',
+    'contact.form.send': 'Enviar mensaje',
     "social_media_reserved": "Síguenos en:",
     'projects': {
       title: 'Proyectos'
@@ -108,6 +113,11 @@ const translations = {
     'contact.address': 'Adresse',
     'contact.email': 'E-mail',
     'contact.phone': 'Téléphone',
+    'contact.form.title': 'Démarrons votre projet',
+    'contact.form.name': 'Nom : Juan Pérez',
+    'contact.form.email': 'Votre email: juanperez@example.com',
+    'contact.form.message': 'Parlez-nous de votre projet...',
+    'contact.form.send': 'Envoyer le message',
     "social_media_reserved": "Suivez-nous sur :",
     "projects": {
         title: 'Projets'
@@ -160,6 +170,11 @@ const translations = {
     'contact.address': 'Address',
     'contact.email': 'Email',
     'contact.phone': 'Phone',
+    'contact.form.title': 'Let’s start your project',
+    'contact.form.name': 'Name: Juan Pérez',
+    'contact.form.email': 'Your email: juanperez@example.com',
+    'contact.form.message': 'Tell us about your project...',
+    'contact.form.send': 'Send message',
     "social_media_reserved": "Follow us on:"
   }
 };
