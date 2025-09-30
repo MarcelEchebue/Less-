@@ -62,6 +62,7 @@ const translations = {
     'contact.form.message': 'Cuéntanos sobre tu proyecto...',
     'contact.form.send': 'Enviar mensaje',
     "social_media_reserved": "Síguenos en:",
+    "web_dev_reserved": "Desarrollador Web",
     'projects': {
       title: 'Proyectos'
     }
@@ -119,6 +120,7 @@ const translations = {
     'contact.form.message': 'Parlez-nous de votre projet...',
     'contact.form.send': 'Envoyer le message',
     "social_media_reserved": "Suivez-nous sur :",
+    "web_dev_reserved": "Développeur Web",
     "projects": {
         title: 'Projets'
       }
@@ -175,7 +177,8 @@ const translations = {
     'contact.form.email': 'Your email: juanperez@example.com',
     'contact.form.message': 'Tell us about your project...',
     'contact.form.send': 'Send message',
-    "social_media_reserved": "Follow us on:"
+    "social_media_reserved": "Follow us on:",
+    "web_dev_reserved": "Web Developer",
   }
 };
 

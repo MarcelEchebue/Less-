@@ -156,24 +156,30 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
             <footer className="bg-surface-white mt-20 py-8">
                 <div className="flex flex-col items-center space-y-4">
                     <p className="text-sm text-gray-500">
-                        ERO © {new Date().getFullYear()}
+                        {t("social_media_reserved")}
                     </p>
                     <div className="flex space-x-6">
-                        <a href="https://www.instagram.com/mmbila.e" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/less.mas" target="_blank" rel="noopener noreferrer">
                             <Instagram className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
-                        <a href="https://github.com/MarcelEchebue" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
-                            <Github size={28} />
+                        <a href="https://www.tiktok.com/@less.mas" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className="w-7 h-7"
+                            >
+                                <path d="M224 72.45a72.1 72.1 0 0 1-40-12.07V160a64 64 0 1 1-64-64 8 8 0 0 1 0 16 48 48 0 1 0 48 48V32a8 8 0 0 1 12.42-6.72A56.09 56.09 0 0 0 224 72a8 8 0 0 1 0 16Z" />
+                            </svg>
                         </a>
-                        <a href="mailto:echebuemarcelino@gmail.com">
+                        <a
+                            href="https://www.youtube.com/@lessmasddr" target="_blank" rel="noopener noreferrer">
+                            <Youtube className="text-brand-primary hover:text-brand-accent" size={28} />
+                        </a>
+                        <a href="mailto:info@lessmas.es">
                             <Mail className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
-                        <a href="https://www.linkedin.com/in/marcelino-ebang-echebue-3920181a3" target="_blank" rel="noopener noreferrer">
-                            <Linkedin className="text-brand-primary hover:text-brand-accent" size={28} />
-                        </a>
+                        
                     </div>
                     <p className="text-sm text-gray-500">
-                        Web Developper  
+                        ERO © {new Date().getFullYear()} {t("web_dev_reserved")}
                     </p>
                 </div>
             </footer>
