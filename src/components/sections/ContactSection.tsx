@@ -20,16 +20,6 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
         message: "",
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Aquí conectarías con tu backend (fetch/axios)
-        toast({
-            title: t("contact.form.successTitle"),
-            description: t("contact.form.successMessage"),
-        });
-        setFormData({ name: "", email: "", message: "" });
-    };
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -37,25 +27,64 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
         });
     };
 
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        try {
+            const res = await fetch("/.netlify/functions/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    template: "contact", // nombre del archivo en ./emails/contact.html sin extensión
+                    to: "marceloebang@gmail.com", // tu correo real
+                    data: {
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message,
+                    },
+                }),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                toast({
+                    title: t("contact.form.successTitle"),
+                    description: t("contact.form.successMessage"),
+                });
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                toast({
+                    title: "Error",
+                    description: data.error || "Hubo un problema al enviar el mensaje",
+                    variant: "destructive",
+                });
+            }
+        } catch (err) {
+            console.error(err);
+            toast({
+                title: "Error",
+                description: "Hubo un problema al enviar el mensaje",
+                variant: "destructive",
+            });
+        }
+    };
+
     return (
         <div className="min-h-screen flex flex-col bg-surface-warm">
-            {/* ✅ Header fijo */}
             <Header />
 
-            {/* Contenido principal */}
             <section id="contact" className="bg-surface-warm py-20">
                 <main className="flex-1 pt-32 px-6">
                     <div className="max-w-6xl mx-auto">
-                        {/* Título */}
                         <div className="text-center mb-16">
                             <h2 className="text-4xl md:text-6xl font-bold text-brand-primary tracking-wider mb-6">
                                 {t("contact.title")}
                             </h2>
                         </div>
 
-                        {/* Grid de información + formulario */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                            {/* 📍 Información de contacto */}
+                            {/* Información de contacto */}
                             <div className="space-y-12">
                                 <div className="space-y-8">
                                     <div className="flex items-start space-x-4">
@@ -101,7 +130,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                 </div>
                             </div>
 
-                            {/* 📝 Formulario de contacto */}
+                            {/* Formulario */}
                             <div className="bg-surface-white p-8 rounded-lg shadow-lg">
                                 <h3 className="text-2xl font-semibold text-brand-primary mb-8">
                                     {t("contact.form.title")}
@@ -152,7 +181,6 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                 </main>
             </section>
 
-            {/* ✅ Footer con redes sociales */}
             <footer className="bg-surface-white mt-20 py-8">
                 <div className="flex flex-col items-center space-y-4">
                     <p className="text-sm text-gray-500">
@@ -176,7 +204,6 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                         <a href="mailto:info@lessmas.es">
                             <Mail className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
-                        
                     </div>
                     <p className="text-sm text-gray-500">
                         ERO © {new Date().getFullYear()} {t("web_dev_reserved")}
