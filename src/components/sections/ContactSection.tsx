@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Send, Instagram, Linkedin, Youtube, Github } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
@@ -21,10 +21,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -35,19 +32,15 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    template: "contact", // nombre del archivo en ./emails/contact.html sin extensión
+                    template: "contact", // nombre de tu archivo en emails/contact.html
                     to: "marceloebang@gmail.com", // tu correo real
-                    data: {
-                        name: formData.name,
-                        email: formData.email,
-                        message: formData.message,
-                    },
+                    data: formData, // { name, email, message }
                 }),
             });
 
-            const data = await res.json();
+            const result = await res.json();
 
-            if (data.success) {
+            if (res.ok) {
                 toast({
                     title: t("contact.form.successTitle"),
                     description: t("contact.form.successMessage"),
@@ -56,7 +49,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
             } else {
                 toast({
                     title: "Error",
-                    description: data.error || "Hubo un problema al enviar el mensaje",
+                    description: result.error || "Hubo un problema al enviar el mensaje",
                     variant: "destructive",
                 });
             }
@@ -110,9 +103,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                             <h4 className="font-medium text-brand-primary mb-2">
                                                 {t("contact.email")}
                                             </h4>
-                                            <p className="text-text-secondary">
-                                                info@lessmas.es
-                                            </p>
+                                            <p className="text-text-secondary">info@lessmas.es</p>
                                         </div>
                                     </div>
 
@@ -183,22 +174,17 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
 
             <footer className="bg-surface-white mt-20 py-8">
                 <div className="flex flex-col items-center space-y-4">
-                    <p className="text-sm text-gray-500">
-                        {t("social_media_reserved")}
-                    </p>
+                    <p className="text-sm text-gray-500">{t("social_media_reserved")}</p>
                     <div className="flex space-x-6">
                         <a href="https://www.instagram.com/less.mas" target="_blank" rel="noopener noreferrer">
                             <Instagram className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
                         <a href="https://www.tiktok.com/@less.mas" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className="w-7 h-7"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" className="w-7 h-7">
                                 <path d="M224 72.45a72.1 72.1 0 0 1-40-12.07V160a64 64 0 1 1-64-64 8 8 0 0 1 0 16 48 48 0 1 0 48 48V32a8 8 0 0 1 12.42-6.72A56.09 56.09 0 0 0 224 72a8 8 0 0 1 0 16Z" />
                             </svg>
                         </a>
-                        <a
-                            href="https://www.youtube.com/@lessmasddr" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.youtube.com/@lessmasddr" target="_blank" rel="noopener noreferrer">
                             <Youtube className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
                         <a href="mailto:info@lessmas.es">

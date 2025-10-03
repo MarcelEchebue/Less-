@@ -1,29 +1,31 @@
-// netlify/functions/send-email.js
-import { send } from "@netlify/email";
-
-export const handler = async (event) => {
-    try {
-        if (event.httpMethod !== "POST") {
-        return { statusCode: 405, body: "Method Not Allowed" };
-    }
-
+exports.handler = async (event) => {
     const { template, to, data } = JSON.parse(event.body);
 
-    await send({
-      template,  // contact.html
-      to,        // info@lessmas.es
-      message: data, // { name, email, message }
-    });
+    try {
+        // Llama a la Netlify Email Extension
+        const response = await fetch(`${process.env.lessmas.es}/.netlify/functions/email`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                template,
+                to,
+                message: data
+            }),
+        });
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify({ success: true }),
+        if (!response.ok) {
+            const text = await response.text();
+            throw new Error(text);
+        }
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: "Correo enviado correctamente" }),
         };
     } catch (error) {
-        console.error(error);
         return {
-        statusCode: 500,
-        body: JSON.stringify({ success: false, error: error.message }),
+            statusCode: 500,
+            body: JSON.stringify({ message: "Error al enviar el correo", error: error.message }),
         };
     }
 };
