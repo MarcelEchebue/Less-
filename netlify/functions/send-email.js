@@ -1,9 +1,11 @@
 exports.handler = async (event) => {
+    console.log("Event body:", event.body);
+    
     const { template, to, data } = JSON.parse(event.body);
 
     try {
-        // Llama a la Netlify Email Extension
-        const response = await fetch(`${process.env.lessmas.es}/.netlify/functions/email`, {
+        // Usar URL relativa para llamar a la otra función en Netlify
+        const response = await fetch(`/.netlify/functions/email`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

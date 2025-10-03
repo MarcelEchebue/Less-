@@ -32,11 +32,12 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    template: "contact", // nombre de tu archivo en emails/contact.html
-                    to: "marceloebang@gmail.com", // tu correo real
-                    data: formData, // { name, email, message }
+                    template: "contact",
+                    to: "marceloebang@gmail.com",
+                    data: { name: formData.name, email: formData.email, message: formData.message },
                 }),
             });
+
 
             const result = await res.json();
 
