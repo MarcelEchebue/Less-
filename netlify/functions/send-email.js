@@ -5,7 +5,7 @@ exports.handler = async (event) => {
 
     try {
         // Usar URL relativa para llamar a la otra función en Netlify
-        const response = await fetch(`/.netlify/functions/email`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/.netlify/functions/email`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

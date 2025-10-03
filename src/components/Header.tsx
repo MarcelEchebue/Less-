@@ -101,7 +101,7 @@ export function Header({ onNavigate }: HeaderProps) {
             </div>
           )}
 
-          {/* Botón Menú → cambia entre Menu y X */}
+          {/* Botón Menú → cambia entre Menu y X , para ponerlo de vuelta se saca el corchete que esta despues de </Button>
           <Button
             variant="ghost"
             size="sm"
@@ -109,7 +109,7 @@ export function Header({ onNavigate }: HeaderProps) {
             className="p-2 hover:bg-surface-neutral relative z-50"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          </Button>*/}
         </div>
       </header>
 

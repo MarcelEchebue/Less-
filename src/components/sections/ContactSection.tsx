@@ -104,7 +104,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                             <h4 className="font-medium text-brand-primary mb-2">
                                                 {t("contact.email")}
                                             </h4>
-                                            <p className="text-text-secondary">info@lessmas.es</p>
+                                            <p className="text-text-secondary">didierych@gmail.com</p>
                                         </div>
                                     </div>
 
@@ -117,6 +117,8 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                                 {t("contact.phone")}
                                             </h4>
                                             <p className="text-text-secondary">+221 76 302 28 90</p>
+                                            <p className="text-text-secondary">+240 222 279 214</p>
+                                            <p className="text-text-secondary">+240 555 879 218</p>
                                         </div>
                                     </div>
                                 </div>
@@ -188,7 +190,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                         <a href="https://www.youtube.com/@lessmasddr" target="_blank" rel="noopener noreferrer">
                             <Youtube className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
-                        <a href="mailto:info@lessmas.es">
+                        <a href="mailto:didierych@gmail.com">
                             <Mail className="text-brand-primary hover:text-brand-accent" size={28} />
                         </a>
                     </div>
