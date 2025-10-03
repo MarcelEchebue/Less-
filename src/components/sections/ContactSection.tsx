@@ -131,39 +131,66 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                 </h3>
 
                                 <form
-                                    name="contact"
-                                    method="POST"
-                                    data-netlify="true"
-                                    className="space-y-6"
-                                >
-                                    <input type="hidden" name="form-name" value="contact" />
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  onSubmit={(e) => {
+    e.preventDefault(); // evitamos el reload
+    const form = e.target as HTMLFormElement;
 
-                                    <Input
-                                        type="text"
-                                        name="name"
-                                        placeholder={t("contact.form.name")}
-                                        required
-                                    />
+    // Simulamos envío a Netlify con fetch
+    fetch("/", {
+      method: "POST",
+      body: new FormData(form),
+    })
+      .then(() => {
+        toast({
+          title: "✅ Mensaje enviado",
+          description: "Gracias por contactarnos, te responderemos pronto.",
+        });
+        form.reset(); // limpia el formulario
+      })
+      .catch(() => {
+        toast({
+          title: "❌ Error",
+          description: "No se pudo enviar el mensaje, inténtalo más tarde.",
+          variant: "destructive",
+        });
+      });
+  }}
+  className="space-y-6"
+>
+  <input type="hidden" name="form-name" value="contact" />
 
-                                    <Input
-                                        type="email"
-                                        name="email"
-                                        placeholder={t("contact.form.email")}
-                                        required
-                                    />
+  <Input
+    type="text"
+    name="name"
+    placeholder={t("contact.form.name")}
+    required
+  />
 
-                                    <Textarea
-                                        name="message"
-                                        placeholder={t("contact.form.message")}
-                                        required
-                                        rows={6}
-                                    />
+  <Input
+    type="email"
+    name="email"
+    placeholder={t("contact.form.email")}
+    required
+  />
 
-                                    <Button type="submit">
-                                        <span>{t("contact.form.send")}</span>
-                                        <Send className="ml-2" size={18} />
-                                    </Button>
-                                </form>
+  <Textarea
+    name="message"
+    placeholder={t("contact.form.message")}
+    required
+    rows={6}
+  />
+
+  <Button
+    type="submit"
+    className="w-full bg-brand-primary hover:bg-interactive-hover text-text-inverse py-4 text-lg font-medium transition-base group"
+  >
+    <span>{t("contact.form.send")}</span>
+    <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
+  </Button>
+</form>
 
                             </div>
                         </div>
