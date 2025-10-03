@@ -130,45 +130,41 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                     {t("contact.form.title")}
                                 </h3>
 
-                                <form onSubmit={handleSubmit} className="space-y-6">
+                                <form
+                                    name="contact"
+                                    method="POST"
+                                    data-netlify="true"
+                                    className="space-y-6"
+                                >
+                                    <input type="hidden" name="form-name" value="contact" />
+
                                     <Input
                                         type="text"
                                         name="name"
                                         placeholder={t("contact.form.name")}
-                                        value={formData.name}
-                                        onChange={handleChange}
                                         required
-                                        className="w-full p-4 border-border focus:border-brand-primary"
                                     />
 
                                     <Input
                                         type="email"
                                         name="email"
                                         placeholder={t("contact.form.email")}
-                                        value={formData.email}
-                                        onChange={handleChange}
                                         required
-                                        className="w-full p-4 border-border focus:border-brand-primary"
                                     />
 
                                     <Textarea
                                         name="message"
                                         placeholder={t("contact.form.message")}
-                                        value={formData.message}
-                                        onChange={handleChange}
                                         required
                                         rows={6}
-                                        className="w-full p-4 border-border focus:border-brand-primary resize-none"
                                     />
 
-                                    <Button
-                                        type="submit"
-                                        className="w-full bg-brand-primary hover:bg-interactive-hover text-text-inverse py-4 text-lg font-medium transition-base group"
-                                    >
+                                    <Button type="submit">
                                         <span>{t("contact.form.send")}</span>
-                                        <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
+                                        <Send className="ml-2" size={18} />
                                     </Button>
                                 </form>
+
                             </div>
                         </div>
                     </div>
