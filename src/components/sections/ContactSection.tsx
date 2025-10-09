@@ -134,21 +134,33 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                     name="contact"
                                     method="POST"
                                     data-netlify="true"
+                                    data-netlify-honeypot="bot-field"
+                                    className="space-y-6"
                                     onSubmit={(e) => {
-                                        e.preventDefault(); // evitamos el reload
+                                        e.preventDefault();
+
+                                        // ✅ Forzamos el tipo correcto de 'form'
                                         const form = e.target as HTMLFormElement;
 
-                                        // Simulamos envío a Netlify con fetch
+                                        // ✅ Convertimos FormData a URLSearchParams correctamente para Netlify
+                                        const formData = new FormData(form);
+                                        const formDataEncoded = new URLSearchParams(
+                                            Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
+                                        );
+
                                         fetch("/", {
                                             method: "POST",
-                                            body: new FormData(form),
+                                            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                                            body: formDataEncoded.toString(),
                                         })
                                             .then(() => {
                                                 toast({
                                                     title: "✅ Mensaje enviado",
                                                     description: "Gracias por contactarnos, te responderemos pronto.",
                                                 });
-                                                form.reset(); // limpia el formulario
+
+                                                // ✅ TypeScript ahora reconoce el reset correctamente
+                                                form.reset();
                                             })
                                             .catch(() => {
                                                 toast({
@@ -158,9 +170,14 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                                 });
                                             });
                                     }}
-                                    className="space-y-6"
                                 >
+                                    {/* Campo oculto necesario para Netlify */}
                                     <input type="hidden" name="form-name" value="contact" />
+                                    <p className="hidden">
+                                        <label>
+                                            Don’t fill this out if you’re human: <input name="bot-field" />
+                                        </label>
+                                    </p>
 
                                     <Input
                                         type="text"
@@ -191,6 +208,8 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
                                     </Button>
                                 </form>
+
+
 
                             </div>
                         </div>
