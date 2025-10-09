@@ -180,24 +180,15 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                     </p>
 
                                     <Input
-                                        type="text"
-                                        name="name"
-                                        placeholder={t("contact.form.name")}
-                                        required
+                                        type="text" name="name" placeholder={t("contact.form.name")} required
                                     />
 
                                     <Input
-                                        type="email"
-                                        name="email"
-                                        placeholder={t("contact.form.email")}
-                                        required
+                                        type="email" name="email" placeholder={t("contact.form.email")} required                                        required
                                     />
 
                                     <Textarea
-                                        name="message"
-                                        placeholder={t("contact.form.message")}
-                                        required
-                                        rows={6}
+                                        name="message" placeholder={t("contact.form.message")} required rows={6}
                                     />
 
                                     <Button
@@ -208,9 +199,6 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
                                     </Button>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </div>
