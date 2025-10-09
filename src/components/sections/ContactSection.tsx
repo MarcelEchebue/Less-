@@ -81,17 +81,16 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                     {t("contact.form.title")}
                                 </h3>
 
-                                
+
                                 <form
                                     name="contact"
                                     method="POST"
-                                    action="/"
                                     data-netlify="true"
                                     data-netlify-honeypot="bot-field"
                                     className="space-y-6"
                                     onSubmit={e => {
                                         e.preventDefault();
-                                        const form = e.target as HTMLFormElement;
+                                        const form = e.currentTarget; // currentTarget evita error TS con reset()
                                         const formData = new FormData(form);
                                         const formDataEncoded = new URLSearchParams(
                                             Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
@@ -117,27 +116,21 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                             });
                                     }}
                                 >
-                                    {/* Netlify hidden fields */}
+                                    {/* Campo oculto obligatorio para Netlify */}
                                     <input type="hidden" name="form-name" value="contact" />
+
+                                    {/* Honeypot para bots */}
                                     <p className="hidden">
                                         <label>
                                             Don’t fill this out if you’re human: <input name="bot-field" />
                                         </label>
                                     </p>
-                                    <Input
-                                        type="text" name="name" placeholder={t("contact.form.name")} required
-                                    />
-                                    <Input
-                                        type="email" name="email"
-                                        placeholder={t("contact.form.email")}
-                                        required
-                                    />
-                                    <Textarea
-                                        name="message"
-                                        placeholder={t("contact.form.message")}
-                                        required
-                                        rows={6}
-                                    />
+
+                                    {/* Inputs estilizados */}
+                                    <Input type="text" name="name" placeholder={t("contact.form.name")} required />
+                                    <Input type="email" name="email" placeholder={t("contact.form.email")} required />
+                                    <Textarea name="message" placeholder={t("contact.form.message")} required rows={6} />
+
                                     <Button
                                         type="submit"
                                         className="w-full bg-brand-primary hover:bg-interactive-hover text-text-inverse py-4 text-lg font-medium transition-base group"
@@ -146,6 +139,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
                                     </Button>
                                 </form>
+
 
 
                             </div>
