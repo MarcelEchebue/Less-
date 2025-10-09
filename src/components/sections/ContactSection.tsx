@@ -14,55 +14,6 @@ interface ContactSectionProps {
 export default function ContactSection({ onNavigate }: ContactSectionProps) {
     const { t } = useLanguage();
     const { toast } = useToast();
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        try {
-            const res = await fetch("/.netlify/functions/send-email", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    template: "contact",
-                    to: "marceloebang@gmail.com",
-                    data: { name: formData.name, email: formData.email, message: formData.message },
-                }),
-            });
-
-
-            const result = await res.json();
-
-            if (res.ok) {
-                toast({
-                    title: t("contact.form.successTitle"),
-                    description: t("contact.form.successMessage"),
-                });
-                setFormData({ name: "", email: "", message: "" });
-            } else {
-                toast({
-                    title: "Error",
-                    description: result.error || "Hubo un problema al enviar el mensaje",
-                    variant: "destructive",
-                });
-            }
-        } catch (err) {
-            console.error(err);
-            toast({
-                title: "Error",
-                description: "Hubo un problema al enviar el mensaje",
-                variant: "destructive",
-            });
-        }
-    };
 
     return (
         <div className="min-h-screen flex flex-col bg-surface-warm">
@@ -78,7 +29,7 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                            {/* Información de contacto */}
+                            {/* Contact Info */}
                             <div className="space-y-12">
                                 <div className="space-y-8">
                                     <div className="flex items-start space-x-4">
@@ -124,30 +75,27 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                 </div>
                             </div>
 
-                            {/* Formulario */}
+                            {/* Netlify Contact Form */}
                             <div className="bg-surface-white p-8 rounded-lg shadow-lg">
                                 <h3 className="text-2xl font-semibold text-brand-primary mb-8">
                                     {t("contact.form.title")}
                                 </h3>
 
+                                
                                 <form
                                     name="contact"
                                     method="POST"
+                                    action="/"
                                     data-netlify="true"
                                     data-netlify-honeypot="bot-field"
                                     className="space-y-6"
-                                    onSubmit={(e) => {
+                                    onSubmit={e => {
                                         e.preventDefault();
-
-                                        // ✅ Forzamos el tipo correcto de 'form'
                                         const form = e.target as HTMLFormElement;
-
-                                        // ✅ Convertimos FormData a URLSearchParams correctamente para Netlify
                                         const formData = new FormData(form);
                                         const formDataEncoded = new URLSearchParams(
                                             Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
                                         );
-
                                         fetch("/", {
                                             method: "POST",
                                             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -155,11 +103,9 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         })
                                             .then(() => {
                                                 toast({
-                                                    title: "✅ Mensaje enviado",
-                                                    description: "Gracias por contactarnos, te responderemos pronto.",
+                                                    title: t("contact.form.successTitle"),
+                                                    description: t("contact.form.successMessage"),
                                                 });
-
-                                                // ✅ TypeScript ahora reconoce el reset correctamente
                                                 form.reset();
                                             })
                                             .catch(() => {
@@ -171,31 +117,27 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                             });
                                     }}
                                 >
-                                    {/* Campo oculto necesario para Netlify */}
+                                    {/* Netlify hidden fields */}
                                     <input type="hidden" name="form-name" value="contact" />
                                     <p className="hidden">
                                         <label>
                                             Don’t fill this out if you’re human: <input name="bot-field" />
                                         </label>
                                     </p>
-
                                     <Input
                                         type="text" name="name" placeholder={t("contact.form.name")} required
                                     />
-
                                     <Input
                                         type="email" name="email"
                                         placeholder={t("contact.form.email")}
                                         required
                                     />
-
                                     <Textarea
                                         name="message"
                                         placeholder={t("contact.form.message")}
                                         required
                                         rows={6}
                                     />
-
                                     <Button
                                         type="submit"
                                         className="w-full bg-brand-primary hover:bg-interactive-hover text-text-inverse py-4 text-lg font-medium transition-base group"
@@ -204,7 +146,6 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
                                     </Button>
                                 </form>
-
 
 
                             </div>
