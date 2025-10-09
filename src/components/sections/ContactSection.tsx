@@ -184,11 +184,16 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                     />
 
                                     <Input
-                                        type="email" name="email" placeholder={t("contact.form.email")} required                                        required
+                                        type="email" name="email"
+                                        placeholder={t("contact.form.email")}
+                                        required
                                     />
 
                                     <Textarea
-                                        name="message" placeholder={t("contact.form.message")} required rows={6}
+                                        name="message"
+                                        placeholder={t("contact.form.message")}
+                                        required
+                                        rows={6}
                                     />
 
                                     <Button
@@ -199,6 +204,9 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
                                     </Button>
                                 </form>
+
+
+
                             </div>
                         </div>
                     </div>
