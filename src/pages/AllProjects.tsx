@@ -6,10 +6,27 @@ import projectsBackground from '@/assets/backgroundproject.jpg';
 import casapatio1 from '@/assets/projects/Residenciales/CasaPatio/Casa-Patio1.jpg';
 import elcubo1 from '@/assets/projects/Residenciales/ElCubo/El-Cubo1.jpg';
 import casagenesis1 from '@/assets/projects/Residenciales/CasaGenesis/Casa-Genesis1.jpg';
+import TL1 from '@/assets/projects/Administrativo/TorreLuz/TL1.png';
+import VS1 from '@/assets/projects/Culturales/LaVozDelSilencio/VS1.png';
+import OE1 from '@/assets/projects/Culturales/OdeonEsculpido/OE1.png';
+import Pi1 from '@/assets/projects/Educativos/EscuelaPrimaria/Pi1.png';
 
-const projectCategories = ['all', 'residential', 'cultural', 'administrative', 'educational', 'industrial', 'urban'];
+
+const projectCategories = ['all', 'residential', 'culturel', 'administrative', 'educational', 'industrial', 'urban'];
 
 const projectsData = {
+    administrative: [
+        { title: "Torre Luz", image: TL1 },
+        
+    ],
+    culturel: [
+        { title: "El Odeon Esculpido", image: OE1 },
+        { title: "La Voz del Silencio", image: VS1 },
+    ],
+    educational: [
+        { title: "Escuela Primaria", image: Pi1 }
+    ],
+
     residential: [
         { title: "Casa Patio", image: casapatio1 },
         { title: "El Cubo", image: elcubo1 },
@@ -44,7 +61,6 @@ export function AllProjects() {
     return (
         <div className="min-h-screen bg-white">
             <Header onNavigate={(path) => navigate(path)} /> {/* ✅ aquí sigue funcionando */}
-
             {/* Hero Section */}
             <section
                 className="relative h-[40vh] md:h-[50vh] bg-cover bg-center"
@@ -55,7 +71,6 @@ export function AllProjects() {
                     <h1 className="text-4xl md:text-6xl font-bold tracking-wide">{t('projects.title')}</h1>
                 </div>
             </section>
-
             {/* Filter Buttons */}
             <section className="py-6 md:py-8 border-b border-gray-200">
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4">
@@ -64,8 +79,8 @@ export function AllProjects() {
                             key={cat}
                             onClick={() => setSelectedCategory(cat)}
                             className={`uppercase tracking-wide transition 
-              text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 
-              ${selectedCategory === cat
+                text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 
+                ${selectedCategory === cat
                                     ? 'border-b-2 border-black font-semibold'
                                     : 'text-gray-500 hover:text-black'}`}
                         >
@@ -74,7 +89,6 @@ export function AllProjects() {
                     ))}
                 </div>
             </section>
-
             {/* Projects Grid */}
             <section className="py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12">
@@ -86,7 +100,6 @@ export function AllProjects() {
                                     projectsData[cat as keyof typeof projectsData].includes(project)
                                 )
                                 : selectedCategory;
-
                             return (
                                 <Link
                                     key={index}
@@ -108,7 +121,7 @@ export function AllProjects() {
                         })
                     ) : (
                         <p className="col-span-full text-center text-gray-500">
-                            {t('projects.noProjects')}
+                            {t('noProjects')}
                         </p>
                     )}
                 </div>

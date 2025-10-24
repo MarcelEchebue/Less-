@@ -30,8 +30,8 @@ const translations = {
     'projects.filter.all': 'Todos',
     'projects.residential': 'PROYECTOS RESIDENCIALES',
     'projects.filter.residential': 'Residencial',
-    'projects.cultural': 'PROYECTOS CULTURALES',
-    'projects.filter.cultural': 'Cultural',
+    'projects.culturel': 'PROYECTOS CULTURALES',
+    'projects.filter.culturel': 'Cultural',
     'projects.administrative': 'PROYECTOS ADMINISTRATIVOS',
     'projects.filter.administrative': 'Administrativo',
     'projects.educational': 'PROYECTOS EDUCATIVOS',
@@ -63,8 +63,9 @@ const translations = {
     'contact.form.send': 'Enviar mensaje',
     "social_media_reserved": "Síguenos en:",
     "web_dev_reserved": "Desarrollador Web",
+    'noProjects': 'No hay proyectos todavía',
     'projects': {
-      title: 'Proyectos'
+      title: 'Proyectos',
     }
   },
   fr: {
@@ -88,8 +89,8 @@ const translations = {
     'projects.filter.all': 'Tous',
     'projects.residential': 'PROJETS RESIDENTIELS',
     'projects.filter.residential': 'Résidentiel',
-    'projects.cultural': 'Projets Culturels',
-    'projects.filter.cultural': 'Culturel',
+    'projects.culturel': 'Projets Culturels',
+    'projects.filter.culturel': 'Culturel',
     'projects.administrative': 'Projets Administratifs',
     'projects.filter.administrative': 'Administratif',
     'projects.educational': 'Projets Éducatifs',
@@ -121,6 +122,7 @@ const translations = {
     'contact.form.send': 'Envoyer le message',
     "social_media_reserved": "Suivez-nous sur :",
     "web_dev_reserved": "Développeur Web",
+    'noProjects': 'Pas encore de projets',
     "projects": {
         title: 'Projets'
       }
@@ -147,8 +149,8 @@ const translations = {
     'projects.filter.all': 'All',
     'projects.residential': 'RESIDENTIAL PROJECTS',
     'projects.filter.residential': 'Residential',
-    'projects.cultural': 'Cultural Projects',
-    'projects.filter.cultural': 'Cultural',
+    'projects.culturel': 'Cultural Projects',
+    'projects.filter.culturel': 'Cultural',
     'projects.administrative': 'Administrative Projects',
     'projects.filter.administrative': 'Administrative',
     'projects.educational': 'Educational Projects',
@@ -179,6 +181,7 @@ const translations = {
     'contact.form.send': 'Send message',
     "social_media_reserved": "Follow us on:",
     "web_dev_reserved": "Web Developer",
+    'noProjects': 'No projects yet',
   }
 };
 

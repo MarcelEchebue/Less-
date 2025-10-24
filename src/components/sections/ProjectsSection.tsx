@@ -6,19 +6,36 @@ import projectsBackground from '@/assets/backgroundproject.jpg';
 import casapatio1 from '@/assets/projects/Residenciales/CasaPatio/Casa-Patio1.jpg';
 import elcubo1 from '@/assets/projects/Residenciales/ElCubo/El-Cubo1.jpg';
 import casagenesis1 from '@/assets/projects/Residenciales/CasaGenesis/Casa-Genesis1.jpg';
+import TL1 from '@/assets/projects/Administrativo/TorreLuz/TL1.png';
+import VS1 from '@/assets/projects/Culturales/LaVozDelSilencio/VS1.png'
+import OE1 from '@/assets/projects/Culturales/OdeonEsculpido/OE1.png'
+import Pi1 from '@/assets/projects/Educativos/EscuelaPrimaria/Pi1.png'
 
 interface ProjectsSectionProps {
   onNavigate: (section: string) => void;
 }
 
-const projectCategories = ['residential'];
-
+const projectCategories = ['administrative', 'culturel', 'residential', 'educational', 'industrial', 'urban'];
+{/* Aqui se pone la categoria de proyectos a mostrar y las 3 imagenes deseadas */}
 const mockProjects = {
+  administrative: [
+    { title: "Torre Luz", image: TL1 },
+    
+  ],
+  culturel: [
+    { title: "La Voz del Silencio", image: VS1 },
+    { title: "El Odeon Esculpido", image: OE1 }, 
+  ],
   residential: [
-    { title: "Casa Genesis", image: casagenesis1 },
     { title: "El Cubo", image: elcubo1 },
+    { title: "Casa Genesis", image: casagenesis1 },
     { title: "Casa Patio", image: casapatio1 }
   ],
+  educational: [
+    { title: "Escuela Primaria", image: Pi1 },
+  ],
+  industrial: [],
+  urban: [],
 };
 
 export function ProjectsSection({ onNavigate }: ProjectsSectionProps) {
@@ -51,7 +68,6 @@ export function ProjectsSection({ onNavigate }: ProjectsSectionProps) {
                 >
                   {t(`projects.${category}`)}
                 </button>
-
                 {/* Signo + → lleva a AllProjects con categoría activa */}
                 <Button
                   variant="ghost"
@@ -63,7 +79,6 @@ export function ProjectsSection({ onNavigate }: ProjectsSectionProps) {
                   </span>
                 </Button>
               </div>
-
               {/* Mostrar proyectos si la categoría está seleccionada */}
               {selectedCategory === category && (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-in fade-in duration-500">

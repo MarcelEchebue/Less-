@@ -1,7 +1,31 @@
 import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { useLanguage } from "@/contexts/LanguageContext";
-// Importar imágenes
+// Importar imágenes administrativas
+import TL1 from "@/assets/projects/Administrativo/TorreLuz/TL1.png";
+import TL2 from "@/assets/projects/Administrativo/TorreLuz/TL2.jpg";
+import TL3 from "@/assets/projects/Administrativo/TorreLuz/TL3.jpg";
+import TL4 from "@/assets/projects/Administrativo/TorreLuz/TL4.jpg";
+import TL5 from "@/assets/projects/Administrativo/TorreLuz/TL5.jpg";
+import TL6 from "@/assets/projects/Administrativo/TorreLuz/TL6.jpg";
+import TL7 from "@/assets/projects/Administrativo/TorreLuz/TL7.jpg";
+// Importar imágenes culturales
+import VS1 from "@/assets/projects/Culturales/LaVozDelSilencio/VS1.png"
+import VS2 from "@/assets/projects/Culturales/LaVozDelSilencio/VS2.jpg";
+import VS3 from "@/assets/projects/Culturales/LaVozDelSilencio/VS3.jpg";
+import VS4 from "@/assets/projects/Culturales/LaVozDelSilencio/VS4.jpg";
+import VS5 from "@/assets/projects/Culturales/LaVozDelSilencio/VS5.jpg";
+import VS6 from "@/assets/projects/Culturales/LaVozDelSilencio/VS6.jpg";
+import VS7 from "@/assets/projects/Culturales/LaVozDelSilencio/VS7.jpg";
+import OE1 from "@/assets/projects/Culturales/OdeonEsculpido/OE1.png";
+import OE2 from "@/assets/projects/Culturales/OdeonEsculpido/OE2.jpg";
+import OE3 from "@/assets/projects/Culturales/OdeonEsculpido/OE3.jpg";
+import OE4 from "@/assets/projects/Culturales/OdeonEsculpido/OE4.jpg";
+import OE5 from "@/assets/projects/Culturales/OdeonEsculpido/OE5.jpg";
+import OE6 from "@/assets/projects/Culturales/OdeonEsculpido/OE6.jpg";
+import OE7 from "@/assets/projects/Culturales/OdeonEsculpido/OE7.jpg";
+
+// Importar imágenes residenciales
 import casapatio1 from "@/assets/projects/Residenciales/CasaPatio/Casa-Patio1.jpg";
 import casapatio2 from "@/assets/projects/Residenciales/CasaPatio/Casa-Patio2.jpg";
 import casapatio3 from "@/assets/projects/Residenciales/CasaPatio/Casa-Patio3.jpg";
@@ -17,8 +41,1562 @@ import casagenesis2 from "@/assets/projects/Residenciales/CasaGenesis/Casa-Genes
 import casagenesis3 from "@/assets/projects/Residenciales/CasaGenesis/Casa-Genesis3.jpg";
 import casagenesis4 from "@/assets/projects/Residenciales/CasaGenesis/Casa-Genesis4.jpg";
 import casagenesis5 from "@/assets/projects/Residenciales/CasaGenesis/Casa-Genesis5.jpg";
+// Importar imágenes educativas
+import Pi1 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi1.png";
+import Pi2 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi2.jpg";
+import Pi3 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi3.jpg";
+import Pi4 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi4.jpg";
+import Pi5 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi5.jpg";
+import Pi6 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi6.jpg";
+import Pi7 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi7.jpg";
+//import Pi8 from "@/assets/projects/Educativos/EscuelaPrimaria/Pi8.jpg";
+
 
 export const projectsDetails = {
+    administrative: {
+        "torre-luz": {
+            title: "",
+            description: {
+                //es: "Rehabilitación de un pequeño espacio para convertirlo en hogar, optimizando luz, ventilación y privacidad.",
+                // en: "Rehabilitation of a small space to turn it into a home, optimizing light, ventilation, and privacy.",
+            },
+            media: [
+                {
+                    type: "image",
+                    src: TL1,
+                    texts: [
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        TORRE
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">LUZ</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        TOUR
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">LUMIERE</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        TOWER
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">LIGHT</span>
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "80%",
+                            right: "40%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        },
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-sx md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "1%",
+                            right: "27%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        }
+                    ],
+                },
+                {
+                    type: "image",
+                    src: TL2,
+                    texts: [
+                        {
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        La <span className="font-bold">Torre Luz</span> es un edificio de oficinas
+                                        que forma parte de un concurso de tres
+                                        edificios organizado por la <span className="font-bold">BCEAO</span>.
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        El proyecto busca una <span className="font-bold">reconección del ser humano con la naturaleza</span> por medio de la <span className="font-bold">continuidad visual</span> que ofrecen 
+                                        las aberturas de la fachhada y un exterior cargado de <span className="font-bold">vegetacion</span> y <span className="font-bold">espejos de agua</span>.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        La <span className="font-bold">Tour Lumière</span> est un immeuble de bureaux
+                                        faisant partie d’un concours de trois
+                                        bâtiments organisé par la <span className="font-bold">BCEAO</span>.
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Le projet vise à une <span className="font-bold">reconnexion de l’être humain avec la nature</span>
+                                        grâce à la <span className="font-bold">continuité visuelle</span> offerte par les ouvertures de la façade
+                                        et un extérieur riche en <span className="font-bold">végétation</span> et en <span className="font-bold">plans d’eau</span>.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        The <span className="font-bold">Light Tower</span> is an office building
+                                        that is part of a competition of three
+                                        buildings organized by the <span className="font-bold">BCEAO</span>.
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        The project seeks a <span className="font-bold">reconnection between humans and nature</span>
+                                        through the <span className="font-bold">visual continuity</span> provided by the façade openings
+                                        and an exterior filled with <span className="font-bold">vegetation</span> and <span className="font-bold">water features</span>.
+                                    </p>
+                                </div>
+                            ),
+                            
+                            top:"4%", // 👈 misma altura que el otro texto
+                            right:"45%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                        {
+                            es: (
+                                <div className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Año:</span> 2025</p>
+                                    <p><span className="font-bold">Tipo de encargo:</span> Concurso</p>
+                                    <p><span className="font-bold">Tipo de proyecto:</span> Obra nueva</p>
+                                    <p><span className="font-bold">Ubicación:</span> Desconocida</p>
+                                    <p><span className="font-bold">Superficie:</span> 14.000 m²</p>
+                                    <p><span className="font-bold">Fase del proyecto:</span> Diseño</p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Année :</span> 2025</p>
+                                    <p><span className="font-bold">Type de commande :</span> Concours</p>
+                                    <p><span className="font-bold">Type de projet :</span> Nouvelle construction</p>
+                                    <p><span className="font-bold">Emplacement :</span> Inconnu</p>
+                                    <p><span className="font-bold">Surface :</span> 14.000 m²</p>
+                                    <p><span className="font-bold">Phase du projet :</span> Conception</p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Year :</span> 2025</p>
+                                    <p><span className="font-bold">Type of commission:</span> Competition</p>
+                                    <p><span className="font-bold">Project type:</span> New construction</p>
+                                    <p><span className="font-bold">Location:</span> Unknown</p>
+                                    <p><span className="font-bold">Area:</span> 14,000 m²</p>
+                                    <p><span className="font-bold">Project phase:</span> Design</p>
+                                </div>
+                            ),
+                            top: "5%", // 👈 misma altura que el otro texto
+                            right: "2%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: TL3,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        UNA <span className="font-bold">CAJA DE CRISTAL</span>
+                                        <br className="block md:hidden" /> ENVUELTA CON <span className="font-bold">SEDA</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        La <span className="font-bold">doble piel</span> del edificio nos permite aumentar su <span className="font-bold">eficiencia energética</span> , haciendo de el un diseño respetuoso con el <span className="font-bold">medio ambiente</span>.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        UNE <span className="font-bold">BOÎTE DE VERRE</span>
+                                        <br className="block md:hidden" /> ENVELOPPÉE DE <span className="font-bold">SOIE</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        La <span className="font-bold">double peau</span> du bâtiment permet d’augmenter son <span className="font-bold">efficacité énergétique</span>,
+                                        faisant de lui une conception respectueuse de <span className="font-bold">l’environnement</span>.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        A <span className="font-bold">GLASS BOX</span>
+                                        <br className="block md:hidden" /> WRAPPED IN <span className="font-bold">SILK</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        The building's <span className="font-bold">double skin</span> increases its <span className="font-bold">energy efficiency</span>,
+                                        making it a design that respects the <span className="font-bold">environment</span>.
+                                    </p>
+                                </div>
+                            ),
+                            top:"3%", // 👈 misma altura que el otro texto
+                            right:"45%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                    ]
+                },
+                {
+                    type: "image",
+                    src: TL4,
+                    texts: [
+                        {
+                            es: (
+                                <div className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        INTERIORES
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">MINIMALISTAS</span>
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">CÁLIDOS</span> Y
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">ACOGEDORES</span>.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        INTÉRIEURS
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">MINIMALISTES</span>
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">CHALEUREUX</span> ET
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">ACCUEILLANTS</span>.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        INTERIORS
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">MINIMALIST</span>
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">WARM</span> AND
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">COZY</span>.
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "10%", //para subir el texto segun sea necesario
+                            right: "5%",
+                            className: "drop-shadow-md", // 👈 ahora solo aplicas sombra aquí
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: TL5,
+                    texts: [
+                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: TL6,
+                    texts: [
+                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: TL7,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">MENOS</span> ES <span className="font-bold">MEJOR</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">MOINS</span> C'EST <span className="font-bold">MIEUX</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">LESS</span> IS <span className="font-bold">BETTER</span>
+                                    </p>
+                                </div>
+                            ),
+                            top:"3%", // 👈 misma altura que el otro texto
+                            right:"65%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                }
+            ],
+        },
+    },
+    culturel: {
+        "la-voz-del-silencio": {
+            title: "",
+            description: {},
+            media: [
+                {
+                    type: "image",
+                    src: VS1,
+                    texts: [
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LA VOZ DEL
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">SILENCIO</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LA VOIX DU
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">SILENCE</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        THE VOICE OF
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">SILENCE</span>
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "80%",
+                            right: "40%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        },
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-sx md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "0%",
+                            right: "27%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        }
+                    ],
+                },
+                {
+                    type: "image",
+                    src: VS2,
+                    texts: [
+                        {
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        EL <span className="font-bold">MUSERO</span> QUE QUISO
+                                    </p>
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        SER LA <span className="font-bold">OBRA DE ARTE</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        La <span className="font-bold">voz del silencio</span> es un museo que trata de ser 
+                                        en si mismo una <span className="font-bold">obra de arte</span>, aun si el edificio estuviera vacio
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        A parte de las obras hechas por el
+                                        hombre, el proyecto también expone
+                                        <span className="font-bold">La Naturaleza</span> como la <span className="font-bold">obra maestra</span>,
+                                        representada por <span className="font-bold">vegetación y espejos
+                                        de agua</span> enmarcados por los <span className="font-bold">pórticos.</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        LE <span className="font-bold">MUSÉE</span> QUI VOULAIT
+                                    </p>
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        ÊTRE L'<span className="font-bold">ŒUVRE D'ART</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        La <span className="font-bold">voix du silence</span> est un musée qui cherche à être
+                                        en lui-même une <span className="font-bold">œuvre d'art</span>, même si le bâtiment était vide.
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        En plus des œuvres créées par l'homme, le projet expose aussi
+                                        <span className="font-bold">la Nature</span> comme la <span className="font-bold">pièce maîtresse</span>,
+                                        représentée par la <span className="font-bold">végétation et les miroirs d'eau</span> encadrés par les <span className="font-bold">portiques.</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        THE <span className="font-bold">MUSEUM</span> THAT WANTED
+                                    </p>
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        TO BE THE <span className="font-bold">WORK OF ART</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        The <span className="font-bold">voice of silence</span> is a museum that seeks to be
+                                        a <span className="font-bold">work of art</span> in itself, even if the building were empty.
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Beyond the works made by man, the project also exhibits
+                                        <span className="font-bold">Nature</span> as the <span className="font-bold">masterpiece</span>,
+                                        represented by <span className="font-bold">vegetation and reflecting pools</span> framed by the <span className="font-bold">porticoes.</span>
+                                    </p>
+                                </div>
+                            ),
+                            
+                            top:"4%", // 👈 misma altura que el otro texto
+                            right:"45%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: VS3,
+                    texts: [
+                    ]
+                },
+                {
+                    type: "image",
+                    src: VS4,
+                    texts: [
+                        {
+                            es: (
+                                <div className="text-[5px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Año:</span> 2025</p>
+                                    <p><span className="font-bold">Tipo de encargo:</span> Concurso</p>
+                                    <p><span className="font-bold">Tipo de proyecto:</span> Obra nueva</p>
+                                    <p><span className="font-bold">Ubicación:</span> Desconocida</p>
+                                    <p><span className="font-bold">Superficie:</span> 4.134 m²</p>
+                                    <p><span className="font-bold">Fase del proyecto:</span> Diseño</p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="text-[5px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Année :</span> 2025</p>
+                                    <p><span className="font-bold">Type de commande :</span> Concours</p>
+                                    <p><span className="font-bold">Type de projet :</span> Nouvelle construction</p>
+                                    <p><span className="font-bold">Emplacement :</span> Inconnu</p>
+                                    <p><span className="font-bold">Surface :</span> 4.134 m²</p>
+                                    <p><span className="font-bold">Phase du projet :</span> Conception</p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="text-[5px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Year :</span> 2025</p>
+                                    <p><span className="font-bold">Type of commission:</span> Competition</p>
+                                    <p><span className="font-bold">Project type:</span> New construction</p>
+                                    <p><span className="font-bold">Location:</span> Unknown</p>
+                                    <p><span className="font-bold">Area:</span> 4.134 m²</p>
+                                    <p><span className="font-bold">Project phase:</span> Design</p>
+                                </div>
+                            ),
+                            top: "7%", // 👈 misma altura que el otro texto
+                            right: "65%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: VS5,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        UNA ARQUITECTURA DE
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">TRES MATERIALES</span> COMO
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">FRANK LLOYD WRIGHT</span> 
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        UNE ARCHITECTURE DE
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">TROIS MATÉRIAUX</span> COMME
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">FRANK LLOYD WRIGHT</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        AN ARCHITECTURE OF
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">THREE MATERIALS</span> LIKE
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">FRANK LLOYD WRIGHT</span>
+                                    </p>
+                                </div>
+                            ),
+                            top:"5%", // 👈 misma altura que el otro texto
+                            right:"65%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: VS6,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">BLANCO</span> COMO SI
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        DEL <span className="font-bold">MÁRMOL</span> DE
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">MIGUEL ÁNGEL</span> SE
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        TRATARA.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        MÊME UN <span className="font-bold">MUSÉE</span>
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        VEUT <span className="font-bold">ÊTRE QUELQUE CHOSE DE PLUS.</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        EVEN A <span className="font-bold">MUSEUM</span>
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        WANTS <span className="font-bold">TO BE SOMETHING MORE.</span>
+                                    </p>
+                                </div>
+                            ),
+                            top:"5%", // 👈 misma altura que el otro texto
+                            right:"70%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: VS7,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        HASTA UN <span className="font-bold">MUSEO</span>
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        QUIERE <span className="font-bold">SER ALGO MÁS.</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        MÊME UN <span className="font-bold">MUSÉE</span>
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        VEUT <span className="font-bold">ÊTRE QUELQUE CHOSE DE PLUS.</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        EVEN A <span className="font-bold">MUSEUM</span>
+                                    </p>
+                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        WANTS <span className="font-bold">TO BE SOMETHING MORE.</span>
+                                    </p>
+                                </div>
+                            ),
+                            top:"3%", // 👈 misma altura que el otro texto
+                            right:"65%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                }
+            ],
+        },
+        "el-odeon-esculpido": {
+            title: "",
+            description: {},
+            media: [
+                {
+                    type: "image",
+                    src: OE1,
+                    texts: [
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        EL ODEÓN
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">ESCULPIDO</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        L'ODÉON
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">SCULPTÉ</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        THE ODEON
+                                    </p>
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        <span className="font-bold">SCULPTED</span>
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "90%",
+                            right: "40%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        },
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-sx md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-4xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "-20%",
+                            right: "27%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        }
+                    ],
+                },
+                {
+                    type: "image",
+                    src: OE2,
+                    texts: [
+                        {
+                            es: (
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Año:</span> 2025</p>
+                                    <p><span className="font-bold">Tipo de encargo:</span> Concurso</p>
+                                    <p><span className="font-bold">Tipo de proyecto:</span> Obra nueva</p>
+                                    <p><span className="font-bold">Ubicación:</span> Desconocida</p>
+                                    <p><span className="font-bold">Superficie:</span> 5.094 m²</p>
+                                    <p><span className="font-bold">Fase del proyecto:</span> Diseño</p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Année :</span> 2025</p>
+                                    <p><span className="font-bold">Type de commande :</span> Concours</p>
+                                    <p><span className="font-bold">Type de projet :</span> Nouvelle construction</p>
+                                    <p><span className="font-bold">Emplacement :</span> Inconnu</p>
+                                    <p><span className="font-bold">Surface :</span> 5.094 m²</p>
+                                    <p><span className="font-bold">Phase du projet :</span> Conception</p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p><span className="font-bold">Year :</span> 2025</p>
+                                    <p><span className="font-bold">Type of commission:</span> Competition</p>
+                                    <p><span className="font-bold">Project type:</span> New construction</p>
+                                    <p><span className="font-bold">Location:</span> Unknown</p>
+                                    <p><span className="font-bold">Area:</span> 5.094 m²</p>
+                                    <p><span className="font-bold">Project phase:</span> Design</p>
+                                </div>
+                            ),
+                            top: "5%", // 👈 misma altura que el otro texto
+                            right: "55%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: OE3,
+                    texts: [
+                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: OE4,
+                    texts: [
+                        {
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        El <span className="font-bold">concepto rector</span> del edificio se inspira 
+                                        en <span className="font-bold">"El Mito de la Caverna"</span> de <span className="font-bold">Platón</span> representado por <span className="font-bold">accesos en penumbra</span> que contrastan con un espacio central de 8 metros de altura, 
+                                        bañado por <span className="font-bold">luz</span> natural. Esta transición <span className="font-bold">luz-sombra</span> se repite al entrar y salir, especialmente en la sala de conferencias.
+                                        Además, se resalta la <span className="font-bold">escalinata</span> de dicha sala mediante la <span className="font-bold">substracción del volumen exterior</span>, que se convierte en la <span className="font-bold">escalera de acceso</span> a sus distintos niveles.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Le <span className="font-bold">concept directeur</span> du bâtiment s’inspire
+                                        du <span className="font-bold">« Mythe de la Caverne »</span> de <span className="font-bold">Platon</span>, représenté par des
+                                        <span className="font-bold"> accès dans la pénombre</span> contrastant avec un espace central de 8 mètres de hauteur,
+                                        baigné de <span className="font-bold">lumière</span> naturelle. Cette transition <span className="font-bold">lumière-ombre</span> se répète à l’entrée et à la sortie,
+                                        notamment dans la salle de conférence.
+                                        De plus, la <span className="font-bold">grande échelle</span> de cette salle est mise en valeur par la
+                                        <span className="font-bold">soustraction du volume extérieur</span>, qui devient
+                                        <span className="font-bold">l'escalier d'accès</span> à ses différents niveaux.
+                                    </p>
+                                </div>
+                            ),
+                            en: ( //text-[8px] xs:text-xs md:text-base leading-snug text-left text-black hace que las frases se adapten al tamaño de la pantalla
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        The building's <span className="font-bold">main concept</span> is inspired by
+                                        <span className="font-bold"> Plato's “Allegory of the Cave”</span>, represented through
+                                        <span className="font-bold"> dimly lit entrances</span> that contrast with a central space
+                                        8 meters high, bathed in natural <span className="font-bold">light</span>.
+                                        This <span className="font-bold">light-shadow</span> transition is repeated upon entering and exiting,
+                                        especially in the conference hall.
+                                        In addition, the <span className="font-bold">grand staircase</span> of this hall is emphasized by the
+                                        <span className="font-bold">subtraction of the exterior volume</span>, which becomes the
+                                        <span className="font-bold">access stairway</span> to its different levels.
+                                    </p>
+                                </div>
+                            ),
+                            top: "15%", // 👈 misma altura que el otro texto
+                            left: "28%", // 👈 alineado a la derecha
+                            className:
+                                "text-sm md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: OE5,
+                    texts: [
+                        {
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        UNA <span className="font-bold">ARQUITECTURA </span>
+                                            DE <span className="font-bold">CONTRASTES ESPACIALES.</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        La mejor forma de <span className="font-bold">resaltar un </span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">espacio,</span> es que le preceda un 
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        espacio <span className="font-bold">totalmente opuesto</span>.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        UNE <span className="font-bold">ARCHITECTURE </span>
+                                        DE <span className="font-bold">CONTRASTES SPATIAUX.</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        La meilleure façon de <span className="font-bold">mettre en valeur un </span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">espace</span> est qu’il soit précédé d’un
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        espace <span className="font-bold">totalement opposé</span>.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        AN <span className="font-bold">ARCHITECTURE </span>
+                                        OF <span className="font-bold">SPATIAL CONTRASTS.</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        The best way to <span className="font-bold">highlight a </span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">space</span> is to have it preceded by a
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-right text-white">
+                                        <span className="font-bold">completely opposite</span> one.
+                                    </p>
+                                </div>
+                            ),
+                            top:"80%", // 👈 misma altura que el otro texto
+                            left:"50%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        }
+                    ],
+                },
+                {
+                    type: "image",
+                    src: OE6,
+                    texts: [],
+                },
+                {
+                    type: "image",
+                    src: OE7,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">MENOS</span> ES <span className="font-bold">MEJOR</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">MOINS</span> C'EST <span className="font-bold">MIEUX</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">LESS</span> IS <span className="font-bold">BETTER</span>
+                                    </p>
+                                </div>
+                            ),
+                            top:"0%", // 👈 misma altura que el otro texto
+                            right:"65%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                },
+                
+            ],
+        },
+    },
+    educational: {
+        "escuela-primaria": {
+            title: "",
+            description: {
+                //es: "Rehabilitación de un pequeño espacio para convertirlo en hogar, optimizando luz, ventilación y privacidad.",
+                // en: "Rehabilitation of a small space to turn it into a home, optimizing light, ventilation, and privacy.",
+            },
+            media: [
+                {
+                    type: "image",
+                    src: Pi1,
+                    texts: [
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        ESCUELA PRIMARIA 
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        PI(<span className="font-bold">π</span>)
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        ÉCOLE PRIMAIRE
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        PI(<span className="font-bold">π</span>)
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        PRIMARY SCHOOL
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        PI(<span className="font-bold">π</span>)
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "98%",
+                            right: "35%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        },
+                        {
+                            es: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-3xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Menos <span className="font-bold">forma</span>, Más <span className="font-bold">significado</span>”
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-3xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Moins de <span className="font-bold">forme</span>, Plus de <span className="font-bold">sens</span>”
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="flex flex-col text-center">
+                                    <p className="text-xs md:text-3xl font-light text-black">
+                                        LESS<span className="font-bold"> +</span>
+                                    </p>
+                                    <p className="text-xs md:text-2xl font-light text-black">
+                                        “Less <span className="font-bold">form</span>, More <span className="font-bold">meaning</span>”
+                                    </p>
+                                </div>
+                            ),
+                            bottom: "-23%",
+                            right: "27%",
+                            transform: "translateX(10%)",
+                            className: "drop-shadow-md",
+                        }
+                    ],
+                },
+                {
+                    type: "image",
+                    src: Pi2,
+                    texts: [
+                        {
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        La escuela primaria  
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        Pi, concebida como un
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        <span className="font-bold">prototipo</span> para responder a
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        la falta de de infraestructuras
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        educativas en las <span className="font-bold">regiones</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        <span className="font-bold">áridas</span>  de Senegal,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        aplicaca principios de
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        <span className="font-bold">neuroarquitectura</span> para
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        favorecer el desarrollo y
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        bienestar infantil.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        L'école primaire
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        Pi, conçue comme un
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">prototype</span> pour répondre au
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        manque d'infrastructures
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        éducatives dans les <span className="font-bold">régions</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">arides</span> du Sénégal,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        applique des principes de
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">neuroarchitecture</span> afin de
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        favoriser le développement et
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        le bien-être des enfants.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        The Pi elementary school
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        conceived as a
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">prototype</span> to address the
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        lack of educational
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        infrastructure in the <span className="font-bold">arid</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">regions</span> of Senegal,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        applies principles of
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">neuroarchitecture</span> to
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        promote the development and
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        well-being of children.
+                                    </p>
+                                </div>
+                            ),
+                            top:"20%", // 👈 misma altura que el otro texto
+                            right:"60%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: Pi3,
+                    texts: [
+                        {
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        La <span className="font-bold">amplitud</span> de los
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        espacios, <span className="font-bold">la ventilacion</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        <span className="font-bold">natural</span> y el <span className="font-bold">contacto</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        <span className="font-bold">con el exterior</span> reducen
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        el <span className="font-bold">estres</span> y mejoran
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        la <span className="font-bold">concentracion</span>.
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        Pergolados de nipa o tifa
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        permiten clases al aire
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        libre, adaptándose al
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        clima. El diseño
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        promueve un entorno
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        <span className="font-bold">funcional</span>, <span className="font-bold">confortable</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black"> 
+                                        y <span className="font-bold">estimulante</span>.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        L'<span className="font-bold">ampleur</span> des espaces,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        la <span className="font-bold">ventilation naturelle</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        et le <span className="font-bold">contact avec l'extérieur</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        réduisent le <span className="font-bold">stress</span> et améliorent
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        la <span className="font-bold">concentration</span>.
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        Des pergolas en nipa ou en tifa
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        permettent des cours en plein air,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        s'adaptant au climat.
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        Le design promeut un environnement
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">fonctionnel</span>, <span className="font-bold">confortable</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        et <span className="font-bold">stimulant</span>.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        The <span className="font-bold">spaciousness</span> of the areas,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        the <span className="font-bold">natural ventilation</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        and <span className="font-bold">connection with the outdoors</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        reduce <span className="font-bold">stress</span> and improve
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">concentration</span>.
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        Nipa or typha pergolas
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        allow for open-air classes,
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        adapting to the climate.
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        The design promotes a
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        <span className="font-bold">functional</span>, <span className="font-bold">comfortable</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                        and <span className="font-bold">stimulating</span> environment.
+                                    </p>
+                                </div>
+                            ),
+                            top:"12%", // 👈 misma altura que el otro texto
+                            right:"65%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                    ]
+                },
+                {
+                    type: "image",
+                    src: Pi4,
+                    texts: [
+                        {
+                            es: (
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p><span className="font-bold">Año:</span> 2025</p>
+                                    <p><span className="font-bold">Funcion:</span> Educacion</p>
+                                    <p><span className="font-bold">Tipo de proyecto:</span> Obra nueva</p>
+                                    <p><span className="font-bold">Ubicación:</span> Senegal</p>
+                                    <p><span className="font-bold">Superficie:</span> 758.96 m²</p>
+                                    <p><span className="font-bold">Fase del proyecto:</span> Diseño</p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p><span className="font-bold">Année :</span> 2025</p>
+                                    <p><span className="font-bold">Fonction :</span> Éducation</p>
+                                    <p><span className="font-bold">Type de projet :</span> Nouvelle construction</p>
+                                    <p><span className="font-bold">Emplacement :</span> Sénégal</p>
+                                    <p><span className="font-bold">Surface :</span> 758,96 m²</p>
+                                    <p><span className="font-bold">Phase du projet :</span> Conception</p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-black">
+                                    <p><span className="font-bold">Year:</span> 2025</p>
+                                    <p><span className="font-bold">Function:</span> Education</p>
+                                    <p><span className="font-bold">Project type:</span> New construction</p>
+                                    <p><span className="font-bold">Location:</span> Senegal</p>
+                                    <p><span className="font-bold">Area:</span> 758.96 m²</p>
+                                    <p><span className="font-bold">Project phase:</span> Design</p>
+                                </div>
+                            ),
+                            top: "3%", // 👈 misma altura que el otro texto
+                            right: "65%", // 👈 alineado a la derecha
+                            className:
+                                "text-xs md:text-base text-white drop-shadow-md leading-snug",
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: Pi5,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Sus <span className="font-bold">muros de</span> 
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">tapia</span> anaranjados
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        estimulan la
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        <span className="font-bold">creatividad</span> , mientras
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        que las <span className="font-bold">lineas</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        <span className="font-bold">horizontales</span> y
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        <span className="font-bold">texturas naturales</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        aportan <span className="font-bold">calma</span>.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Ses <span className="font-bold">murs en</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">pisé</span> orangés
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        stimulent la
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">créativité</span>, tandis que
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        les <span className="font-bold">lignes</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">horizontales</span> et
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        les <span className="font-bold">textures naturelles</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        apportent du <span className="font-bold">calme</span>.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Its <span className="font-bold">rammed-earth</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">walls</span> in orange tones
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        stimulate
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">creativity</span>, while
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        the <span className="font-bold">horizontal</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">lines</span> and
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">natural textures</span>
+                                    </p>
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        bring <span className="font-bold">calm</span>.
+                                    </p>
+                                </div>
+
+
+                            ),
+                            top:"5%", // 👈 misma altura que el otro texto
+                            left:"0%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                    ],
+                },
+                {
+                    type: "image",
+                    src: Pi6,
+                    texts: [
+                        
+                    ],
+                },
+                {
+                    type: "image",
+                    src: Pi7,
+                    texts: [
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        LA BUENA GESTION DE  <span className="font-bold">LA LUZ</span> 
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        <span className="font-bold"> NATURAL</span> , PEMIRTE TENER
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        ESPACIOS QUE NO NECESITEN
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white"> 
+                                        DE <span className="font-bold">ILUMINACION ARTIFICIAL</span>
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        LA BONNE GESTION DE <span className="font-bold">LA LUMIÈRE</span>
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">NATURELLE</span> PERMET D'AVOIR
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        DES ESPACES QUI N'ONT PAS BESOIN
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        D'<span className="font-bold">ÉCLAIRAGE ARTIFICIEL</span>
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        GOOD MANAGEMENT OF <span className="font-bold">LIGHT</span>
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">NATURAL</span> LIGHT ALLOWS FOR
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        SPACES THAT DO NOT REQUIRE
+                                    </p>
+                                    <p className="text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        <span className="font-bold">ARTIFICIAL LIGHTING</span>
+                                    </p>
+                                </div>
+
+                            ),
+                            top:"5%", // 👈 misma altura que el otro texto
+                            left:"10%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                        {
+                            
+                            es: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        EL TABURETE <span className="font-bold">"TOKU"</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Diseñamos el taburete <span className="font-bold">toku</span> , que ofrece un <span className="font-bold">asiento</span> con un <span className="font-bold">espacio de almacenamiento</span> integrado, permitiendo que los niños acedan y guarden sus materiales.
+                                    </p>
+                                </div>
+                            ),
+                            fr: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        LE TABOURET <span className="font-bold">"TOKU"</span>
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        Nous avons conçu le tabouret <span className="font-bold">Toku</span>, qui offre un <span className="font-bold">siège</span> avec un <span className="font-bold">espace de rangement</span> intégré, permettant aux enfants d’accéder à leurs matériaux et de les ranger.
+                                    </p>
+                                </div>
+                            ),
+                            en: (
+                                <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        THE <span className="font-bold">"TOKU"</span> STOOL
+                                    </p>
+                                    <p className="mt-2 md:mt-4 text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                        We designed the <span className="font-bold">Toku</span> stool, which offers a <span className="font-bold">seat</span> with an integrated <span className="font-bold">storage space</span>, allowing children to access and store their materials.
+                                    </p>
+                                </div>
+                            ),
+                            top:"65%", // 👈 misma altura que el otro texto
+                            right:"45%", // 👈 alineado a la derecha
+                            className: "drop-shadow-md",
+                        },
+                        
+                    ],
+                }
+            ],
+        },
+    },
     residential: {
         "el-cubo": {
             title: "",
@@ -562,7 +2140,10 @@ export const projectsDetails = {
                         },
                     ],
                 },
-                { type: "image", src: casapatio4 },
+                { 
+                    type: "image", 
+                    src: casapatio4 
+                },
                 {
                     type: "image",
                     src: casapatio5,

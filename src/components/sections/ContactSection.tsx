@@ -139,9 +139,6 @@ export default function ContactSection({ onNavigate }: ContactSectionProps) {
                                         <Send className="ml-2 group-hover:translate-x-1 transition-base" size={18} />
                                     </Button>
                                 </form>
-
-
-
                             </div>
                         </div>
                     </div>
