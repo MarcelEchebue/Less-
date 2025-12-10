@@ -68,12 +68,13 @@ export function ProjectsSection({ onNavigate }: ProjectsSectionProps) {
                 >
                   {t(`projects.${category}`)}
                 </button>
-                {/* Signo + → lleva a AllProjects con categoría activa */}
+                {/* Signo + → Nos lleva a AllProjects con categoría activa */}
                 <Button
                   variant="ghost"
                   onClick={() => onNavigate(`/all-projects?category=${category}`)}
                   className="text-text-inverse hover:text-brand-accent p-0"
                 >
+                  {/* Poner los nombres de la categoria en roboto light y el + en roboto bold */}
                   <span className="font-roboto font-bold text-xl md:text-2xl">
                     +
                   </span>

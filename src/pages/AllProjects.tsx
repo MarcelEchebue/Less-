@@ -15,6 +15,7 @@ import Pi1 from '@/assets/projects/Educativos/EscuelaPrimaria/Pi1.png';
 const projectCategories = ['all', 'residential', 'culturel', 'administrative', 'educational', 'industrial', 'urban'];
 
 const projectsData = {
+    //Aqui colocamos las imagenes que queremos que se muestren al pulsar las categorias y de preferencia solo 3 imagenes
     administrative: [
         { title: "Torre Luz", image: TL1 },
         
@@ -26,7 +27,6 @@ const projectsData = {
     educational: [
         { title: "Escuela Primaria", image: Pi1 }
     ],
-
     residential: [
         { title: "Casa Patio", image: casapatio1 },
         { title: "El Cubo", image: elcubo1 },
@@ -79,8 +79,8 @@ export function AllProjects() {
                             key={cat}
                             onClick={() => setSelectedCategory(cat)}
                             className={`uppercase tracking-wide transition 
-                text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 
-                ${selectedCategory === cat
+                                text-xs md:text-sm px-2 md:px-4 py-1 md:py-2 
+                                ${selectedCategory === cat
                                     ? 'border-b-2 border-black font-semibold'
                                     : 'text-gray-500 hover:text-black'}`}
                         >

@@ -488,8 +488,8 @@ export const projectsDetails = {
                                     </p>
                                     <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         A parte de las obras hechas por el
-                                        hombre, el proyecto también expone
-                                        <span className="font-bold">La Naturaleza</span> como la <span className="font-bold">obra maestra</span>,
+                                        hombre, el proyecto también expone.
+                                        <span className="font-bold"> La Naturaleza</span> como la <span className="font-bold">obra maestra</span>,
                                         representada por <span className="font-bold">vegetación y espejos
                                         de agua</span> enmarcados por los <span className="font-bold">pórticos.</span>
                                     </p>
@@ -508,8 +508,8 @@ export const projectsDetails = {
                                         en lui-même une <span className="font-bold">œuvre d'art</span>, même si le bâtiment était vide.
                                     </p>
                                     <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                        En plus des œuvres créées par l'homme, le projet expose aussi
-                                        <span className="font-bold">la Nature</span> comme la <span className="font-bold">pièce maîtresse</span>,
+                                        En plus des œuvres créées par l'homme, le projet expose aussi.
+                                        <span className="font-bold"> La Nature</span> comme la <span className="font-bold">pièce maîtresse</span>,
                                         représentée par la <span className="font-bold">végétation et les miroirs d'eau</span> encadrés par les <span className="font-bold">portiques.</span>
                                     </p>
                                 </div>
@@ -527,8 +527,8 @@ export const projectsDetails = {
                                         a <span className="font-bold">work of art</span> in itself, even if the building were empty.
                                     </p>
                                     <p className="mt-2 md:mt-4 text-[8px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                        Beyond the works made by man, the project also exhibits
-                                        <span className="font-bold">Nature</span> as the <span className="font-bold">masterpiece</span>,
+                                        Beyond the works made by man, the project also exhibits.
+                                        <span className="font-bold"> Nature</span> as the <span className="font-bold">masterpiece</span>,
                                         represented by <span className="font-bold">vegetation and reflecting pools</span> framed by the <span className="font-bold">porticoes.</span>
                                     </p>
                                 </div>
@@ -552,7 +552,7 @@ export const projectsDetails = {
                     texts: [
                         {
                             es: (
-                                <div className="text-[5px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
                                     <p><span className="font-bold">Año:</span> 2025</p>
                                     <p><span className="font-bold">Tipo de encargo:</span> Concurso</p>
                                     <p><span className="font-bold">Tipo de proyecto:</span> Obra nueva</p>
@@ -562,7 +562,7 @@ export const projectsDetails = {
                                 </div>
                             ),
                             fr: (
-                                <div className="text-[5px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
                                     <p><span className="font-bold">Année :</span> 2025</p>
                                     <p><span className="font-bold">Type de commande :</span> Concours</p>
                                     <p><span className="font-bold">Type de projet :</span> Nouvelle construction</p>
@@ -572,7 +572,7 @@ export const projectsDetails = {
                                 </div>
                             ),
                             en: (
-                                <div className="text-[5px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                <div className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
                                     <p><span className="font-bold">Year :</span> 2025</p>
                                     <p><span className="font-bold">Type of commission:</span> Competition</p>
                                     <p><span className="font-bold">Project type:</span> New construction</p>
@@ -649,13 +649,13 @@ export const projectsDetails = {
                             
                             es: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         <span className="font-bold">BLANCO</span> COMO SI
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         DEL <span className="font-bold">MÁRMOL</span> DE
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         <span className="font-bold">MIGUEL ÁNGEL</span> SE
                                     </p>
                                     <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
@@ -665,20 +665,20 @@ export const projectsDetails = {
                             ),
                             fr: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         MÊME UN <span className="font-bold">MUSÉE</span>
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         VEUT <span className="font-bold">ÊTRE QUELQUE CHOSE DE PLUS.</span>
                                     </p>
                                 </div>
                             ),
                             en: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         EVEN A <span className="font-bold">MUSEUM</span>
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         WANTS <span className="font-bold">TO BE SOMETHING MORE.</span>
                                     </p>
                                 </div>
@@ -698,30 +698,30 @@ export const projectsDetails = {
                             
                             es: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         HASTA UN <span className="font-bold">MUSEO</span>
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         QUIERE <span className="font-bold">SER ALGO MÁS.</span>
                                     </p>
                                 </div>
                             ),
                             fr: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         MÊME UN <span className="font-bold">MUSÉE</span>
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         VEUT <span className="font-bold">ÊTRE QUELQUE CHOSE DE PLUS.</span>
                                     </p>
                                 </div>
                             ),
                             en: (
                                 <div className="max-w-xs md:max-w-md px-2 md:px-4 text-[9px] xs:text-xs md:text-base leading-snug text-left text-white">
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         EVEN A <span className="font-bold">MUSEUM</span>
                                     </p>
-                                    <p className="text-[6px] xs:text-xs md:text-base leading-snug text-left text-white">
+                                    <p className="text-[7px] xs:text-xs md:text-base leading-snug text-left text-white">
                                         WANTS <span className="font-bold">TO BE SOMETHING MORE.</span>
                                     </p>
                                 </div>
